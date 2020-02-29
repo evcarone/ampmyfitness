@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import API from "../utils/API";
 import { makeStyles } from '@material-ui/core/styles';
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import DirectionsBikeIcon from '@material-ui/icons/DirectionsBike'; import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import DirectionsRunIcon from '@material-ui/icons/DirectionsRun';
+import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import MediaCard from "../components/Card/index"
+import API from "../utils/API";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -19,18 +26,10 @@ const useStyles = makeStyles(theme => ({
 
 
 
-
-
-
-
-// Handles updating component state when the user types into the input field
-
-
 export default function MaterialVideo() {
     const [yogaVideos, setYogaVideos] = useState([])
 
     const classes = useStyles();
-
 
     useEffect(() => {
 
@@ -50,46 +49,49 @@ export default function MaterialVideo() {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                 >
-                    <Typography className={classes.heading}>Yoga</Typography>
+                    <Typography className={classes.heading}><strong>Yoga</strong> </Typography> <EmojiPeopleIcon></EmojiPeopleIcon>
                 </ExpansionPanelSummary>
-                <ExpansionPanelDetails>
-                    <Typography xs="12">
+                <ExpansionPanelDetails style={{ maxHeight: 700, overflow: 'auto', justifyContent: "center" }}>
+                    <Typography justify="center">
                         {yogaVideos.map(video => (
-                            <div>
-                            <p>{video.snippet.title}</p>
-                            <iframe id="ytplayer" type="text/html" width="640" height="360"
-                             src={`https://www.youtube.com/embed/${video.snippet.resourceId.videoId}?autoplay=1`}
-                             frameborder="0"></iframe>
-                             <p>{video.snippet.resourceId.videoId}</p>
-                            </div>
+                            <MediaCard videoId= {video.snippet.resourceId.videoId} title={video.snippet.title}></MediaCard>
                         ))}
-          </Typography>
+                    </Typography>
                 </ExpansionPanelDetails>
             </ExpansionPanel>
+
             <ExpansionPanel>
                 <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                 >
-                    <Typography className={classes.heading}>Running</Typography>
+                    <Typography className={classes.heading}> <strong>Running</strong> </Typography><DirectionsRunIcon></DirectionsRunIcon>
                 </ExpansionPanelSummary>
-                <ExpansionPanelDetails>
+                <ExpansionPanelDetails style={{ maxHeight: 700, overflow: 'auto', justifyContent: "center" }}>
                     <Typography>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
                         sit amet blandit leo lobortis eget.
           </Typography>
                 </ExpansionPanelDetails>
             </ExpansionPanel>
-            <ExpansionPanel disabled>
+
+            <ExpansionPanel>
                 <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel3a-content"
-                    id="panel3a-header"
+                    aria-controls="panel2a-content"
+                    id="panel2a-header"
                 >
-                    <Typography className={classes.heading}>Disabled Expansion Panel</Typography>
+                    <Typography style={{ margin: "3px" }} className={classes.heading}> <strong>Cycling</strong> </Typography> <DirectionsBikeIcon ></DirectionsBikeIcon>
                 </ExpansionPanelSummary>
+                <ExpansionPanelDetails style={{ maxHeight: 700, overflow: 'auto', justifyContent: "center" }}>
+                    <Typography>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                        sit amet blandit leo lobortis eget.
+          </Typography>
+                </ExpansionPanelDetails>
             </ExpansionPanel>
+
         </div>
     );
 }
