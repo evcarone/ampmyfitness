@@ -1,21 +1,24 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React, { Fragment } from "react";
+import { BrowserRouter as Router} from "react-router-dom";
+import Container from '@material-ui/core/Container';
+import Videos from "./pages/Videos";
+import ButtonAppBar from "./components/ButtonAppBar";
+import MaterialVideo from "./pages/MaterialVideos";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React Team AmpMyFitness</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+function App() {
+  return (
+    <Fragment>
+    <ButtonAppBar />
+    <Container fixed>
+    <Router>
+      <div>
+        <br></br>
+       <MaterialVideo></MaterialVideo>
       </div>
-    );
-  }
+    </Router>
+    </Container>
+    </Fragment>
+  );
 }
 
 export default App;
