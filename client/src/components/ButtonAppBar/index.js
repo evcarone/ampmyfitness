@@ -3,7 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Button from '@material-ui/core/Button';
+
 import Workouts from "../../pages/Workouts";
 
 const useStyles = makeStyles(theme => ({
@@ -30,19 +32,8 @@ export default function ButtonAppBar() {
           <Typography variant="h6" className={classes.title}>
             Amp My Workout!
           </Typography>
-          
-
-
-             
-              <Link to={"/workouts"} color="inherit">Workouts</Link>
-              
-
-             
-              <Link to={"/"} color="inherit">Home</Link>
-              
-
-          
-
+              <Button><Link style={{color: "white", }} to={"/workouts"}>Workouts</Link></Button>
+              <Button><Link style={{color: "white", }} to={"/"} color="inherit">Home</Link></Button>
         </Toolbar>
       </AppBar>
     </div>

@@ -12,7 +12,11 @@ import CardMedia from '@material-ui/core/CardMedia';
 
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
+import WorkoutCard from "../components/WorkoutCard/index"
 import arms from "../utils/workoutGroups/arms"
+import abs from "../utils/workoutGroups/abs"
+import back from "../utils/workoutGroups/back"
+import chest from "../utils/workoutGroups/chest"
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -29,89 +33,141 @@ export default function Workouts() {
     const classes = useStyles();
 
     const [armWorkouts, setArmWorkouts] = useState(arms)
-    
+    const [abWorkouts, setAbWorkouts] = useState(abs)
+    const [backWorkouts, setBackWorkouts] = useState(back)
+    const [chestWorkouts, setChestWorkouts] = useState(chest)
 
     return (
         <div className={classes.root} >
-            
+
             <Container>
 
-            <ExpansionPanel>
+                {/* Arms */}
+                <ExpansionPanel>
 
-                <ExpansionPanelSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel2a-content"
-                    id="panel2a-header"
-                >
-                    <Typography style={{ margin: "3px" }} className={classes.heading}> <strong>Arms</strong> </Typography>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails style={{ maxHeight: 500, overflow: 'auto', justifyContent: "center" }}>
-                    <Typography>
-                        {armWorkouts.map(workout => (
-                            <div>
-                            <Card style={{ margin: "auto", width: "700px", height: "600px", backgroundColor: "#f5f5f5" }} className={classes.root}>
+                    <ExpansionPanelSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel2a-content"
+                        id="panel2a-header"
+                    >
+                        <Typography style={{ margin: "3px" }} className={classes.heading}> <strong>Arms</strong> </Typography>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails style={{ maxHeight: 500, overflow: 'auto', justifyContent: "center" }}>
+                        <Typography>
+                            {armWorkouts.map(workout => (
+                                <div>
+                                    <WorkoutCard name={workout.name} equipment={workout.equipment} description={workout.description} img_start={workout.img_start} img_end={workout.img_end}></WorkoutCard>
+                                    <br></br>
+                                </div>
+                            ))}
+                            
+                        </Typography>
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
 
+                {/* Back */}
+                <ExpansionPanel>
 
-                            <CardContent>
-                                <Typography gutterBottom variant="h4" component="h2">
-                                    <strong>{workout.name}</strong>
-                                </Typography>
-                                <hr></hr>
-                                <Typography gutterBottom variant="h5" component="h2">
-                                    <strong>Equipment Required: </strong>{workout.equipment}
-                                </Typography>
+                    <ExpansionPanelSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel2a-content"
+                        id="panel2a-header"
+                    >
+                        <Typography style={{ margin: "3px" }} className={classes.heading}> <strong>Back</strong> </Typography>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails style={{ maxHeight: 500, overflow: 'auto', justifyContent: "center" }}>
+                        <Typography>
+                            {backWorkouts.map(workout => (
+                                <div>
+                                    <WorkoutCard name={workout.name} equipment={workout.equipment} description={workout.description} img_start={workout.img_start} img_end={workout.img_end}></WorkoutCard>
+                                    <br></br>
+                                </div>
+                            ))}
+                            
+                        </Typography>
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
 
-                                <hr></hr>
+                {/* Abs */}
+                <ExpansionPanel>
 
-                                <Typography gutterBottom variant="h5" component="h2">
-                                    <strong>Description: </strong> {workout.description}
-                                </Typography>
+                    <ExpansionPanelSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel2a-content"
+                        id="panel2a-header"
+                    >
+                        <Typography style={{ margin: "3px" }} className={classes.heading}> <strong>Abs</strong> </Typography>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails style={{ maxHeight: 500, overflow: 'auto', justifyContent: "center" }}>
+                        <Typography>
+                            {abWorkouts.map(workout => (
+                                <div>
+                                    <WorkoutCard name={workout.name} equipment={workout.equipment} description={workout.description} img_start={workout.img_start} img_end={workout.img_end}></WorkoutCard>
+                                    <br></br>
+                                </div>
+                            ))}
+                            
+                        </Typography>
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
 
-                            </CardContent>
+                {/* Chest */}
+                <ExpansionPanel>
 
-                            <CardMedia>
-                                <img style={{ height: "200px", width: "200px", alignContent: "center"}} src={workout.img_start}></img>
-
-                                <img style={{ height: "200px", width: "200px", justifyContent: "center"}} src={workout.img_end}></img>
-                            </CardMedia>
-
-                        </Card>
-                        <br></br>
-                        </div>
-                        ))}
-                    </Typography>
-                </ExpansionPanelDetails>
-            </ExpansionPanel>
+                    <ExpansionPanelSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel2a-content"
+                        id="panel2a-header"
+                    >
+                        <Typography style={{ margin: "3px" }} className={classes.heading}> <strong>Chest</strong> </Typography>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails style={{ maxHeight: 500, overflow: 'auto', justifyContent: "center" }}>
+                        <Typography>
+                            {chestWorkouts.map(workout => (
+                                <div>
+                                    <WorkoutCard name={workout.name} equipment={workout.equipment} description={workout.description} img_start={workout.img_start} img_end={workout.img_end}></WorkoutCard>
+                                    <br></br>
+                                </div>
+                            ))}
+                            
+                        </Typography>
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
 
             </Container>
         </div>
     );
 }
 
-{/* <Card style={{ margin: "auto", width: "700px", height: "600px", backgroundColor: "#f5f5f5" }} className={classes.root}>
+// {armWorkouts.map(workout => (
+//     <div>
+//     <Card style={{ margin: "auto", width: "700px", height: "600px", backgroundColor: "#f5f5f5" }} className={classes.root}>
 
 
-<CardContent>
-    <Typography gutterBottom variant="h4" component="h2">
-        <strong>{armWorkouts[0].name}</strong>
-    </Typography>
-    <hr></hr>
-    <Typography gutterBottom variant="h5" component="h2">
-        <strong>Equipment Required: </strong>{armWorkouts[0].equipment}
-    </Typography>
+//     <CardContent>
+//         <Typography gutterBottom variant="h4" component="h2">
+//             <strong>{workout.name}</strong>
+//         </Typography>
+//         <hr></hr>
+//         <Typography gutterBottom variant="h5" component="h2">
+//             <strong>Equipment Required: </strong>{workout.equipment}
+//         </Typography>
 
-    <hr></hr>
+//         <hr></hr>
 
-    <Typography gutterBottom variant="h5" component="h2">
-        <strong>Description: </strong> {armWorkouts[0].description}
-    </Typography>
+//         <Typography gutterBottom variant="h5" component="h2">
+//             <strong>Description: </strong> {workout.description}
+//         </Typography>
 
-</CardContent>
+//     </CardContent>
 
-<CardMedia>
-    <img style={{ height: "200px", width: "200px", alignContent: "center"}} src={armWorkouts[0].img_start}></img>
+//     <CardMedia>
+//         <img style={{ height: "200px", width: "200px", alignContent: "center"}} src={workout.img_start}></img>
 
-    <img style={{ height: "200px", width: "200px", justifyContent: "center"}} src={armWorkouts[0].img_end}></img>
-</CardMedia>
+//         <img style={{ height: "200px", width: "200px", justifyContent: "center"}} src={workout.img_end}></img>
+//     </CardMedia>
 
-</Card> */}
+// </Card>
+// <br></br>
+// </div>
+// ))}

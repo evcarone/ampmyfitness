@@ -16,7 +16,7 @@ function App() {
         <div style={{ height: 'calc(100vh - 64px)', backgroundImage: `url(/images/Background_Image.jpg)`, backgroundSize: 'cover', }}>
           <Switch>
             <Route exact path="/" component={MaterialVideo} />
-            <Route path="/Workouts" component={Workouts} />
+            <Route path="/workouts" component={Workouts} />
           </Switch>
         </div>
       </div>
