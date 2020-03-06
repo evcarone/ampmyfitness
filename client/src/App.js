@@ -44,9 +44,11 @@ class App extends Component {
     }
 
 
+
 render() {
     return (
       <Router>
+        <div>
         <div>
         <ButtonAppBar />
         <br></br>
@@ -83,13 +85,14 @@ render() {
         <LoggedOutRoute path="/signup" component={SignUpPage}/>
         <Route path="/logout" component={LogoutFunction}/>
       </div>
+      </div>
 
     </Router>
       
     )
   }
 
-
+}
 
 
 
