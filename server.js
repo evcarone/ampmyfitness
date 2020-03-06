@@ -1,7 +1,8 @@
-const express = require("express");
+const express = require('express');
+const bodyParser = require('body-parser');
 const path = require("path");
 const passport = require('passport');
-// const config = require('./server/config');
+const config = require('./server/config');
 const logger = require('morgan')
 const mongoose = require('mongoose')
 const PORT = process.env.PORT || 3001;
@@ -15,7 +16,7 @@ if (process.env.NODE_ENV === "production") {
 
 // connect to the database and load models
 // uses environmental variable for deployment (Heroku) or defaults to local config
-const uri = process.env.MONGODB_URI  //|| config.dbUri;
+const uri = process.env.MONGODB_URI  || config.dbUri;
 
 mongoose.connect(uri);
 // plug in the promise library:
@@ -50,8 +51,8 @@ const authCheckMiddleware = require('./server/middleware/auth-check');
 app.use('/api', authCheckMiddleware);
 
 // routes
-const authRoutes = require('./server/routes/auth');
-const apiRoutes = require('./server/routes/api');
+const authRoutes = require('./server/routes/auth.js');
+const apiRoutes = require('./server/routes/api.js');
 app.use('/auth', authRoutes);
 app.use('/api', apiRoutes);
 
@@ -59,7 +60,7 @@ app.use('/api', apiRoutes);
 // Send every request to the React app
 // Define any API routes before this runs
 app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  res.sendFile(path.join(__dirname, "./client/public/index.html"));
 });
 
 app.listen(PORT, function() {
