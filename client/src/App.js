@@ -1,22 +1,28 @@
-import React, { Fragment } from "react";
-import { BrowserRouter as Router} from "react-router-dom";
-import Container from '@material-ui/core/Container';
+import React from 'react';
 import ButtonAppBar from "./components/ButtonAppBar";
 import MaterialVideo from "./pages/MaterialVideos";
+import Workouts from "./pages/Workouts";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
+
+
+
   return (
-    <Fragment>
-    <ButtonAppBar />
-    <Container fixed>
     <Router>
       <div>
+        <ButtonAppBar />
         <br></br>
-       <MaterialVideo></MaterialVideo>
+        <div style={{ height: 'calc(100vh - 64px)', backgroundImage: `url(/images/Background_Image.jpg)`, backgroundSize: 'cover', }}>
+          <Switch>
+            <Route exact path="/" component={MaterialVideo} />
+            <Route path="/Workouts" component={Workouts} />
+          </Switch>
+        </div>
       </div>
+
     </Router>
-    </Container>
-    </Fragment>
+
   );
 }
 
