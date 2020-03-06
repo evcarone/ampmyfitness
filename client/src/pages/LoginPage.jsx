@@ -94,7 +94,6 @@ class LoginPage extends React.Component {
       />
     );
   }
-
 }
 // commented out line 100 - 102 because of error with proptype required but undefined - not sure if this is deprecated or if there is a different problem
 // LoginPage.contextTypes = {

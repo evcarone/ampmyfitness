@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Card from '@material-ui/core/Card';
 import CardText from '@material-ui/core/Card';
-import RaisedButton from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 
 const LoginForm = ({
@@ -14,7 +14,7 @@ const LoginForm = ({
   user,
   toggleAuthenticateStatus
 }) => (
-  <Card className="container">
+  <Card >
     <form action="/" onSubmit={onSubmit}>
       <h2 className="card-heading">Login</h2>
 
@@ -23,9 +23,10 @@ const LoginForm = ({
 
       <div className="field-line">
         <TextField
-          floatinglabeltext="Email"
+          label="Email"
           name="email"
-          errortext={errors.email}
+          error={errors.email}
+          helperText={ errors.email || null }
           onChange={onChange}
           value={user.email}
         />
@@ -33,17 +34,17 @@ const LoginForm = ({
 
       <div className="field-line">
         <TextField
-          floatinglabeltext="Password"
+          label="Password"
           type="password"
           name="password"
           onChange={onChange}
-          errortext={errors.password}
+          error={errors.password}
           value={user.password}
         />
       </div>
 
       <div className="button-line">
-        <RaisedButton type="submit" label="Log in" primary />
+        <Button type="submit" children="Log in" primary />
       </div>
 
       <CardText>Don't have an account? <Link to={'/signup'}>Create one</Link>.</CardText>
