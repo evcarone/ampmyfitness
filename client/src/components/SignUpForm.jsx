@@ -5,6 +5,7 @@ import Card from '@material-ui/core/Card';
 import CardText from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import Container from '@material-ui/core/Container';
 
 const SignUpForm = ({
   onSubmit,
@@ -12,6 +13,7 @@ const SignUpForm = ({
   errors,
   user,
 }) => (
+  <Container>
   <Card className="container">
     <form action="/" onSubmit={onSubmit}>
       <h2 className="card-heading">Sign Up</h2>
@@ -56,6 +58,7 @@ const SignUpForm = ({
       <CardText>Already have an account? <Link to={'/login'}>Log in</Link></CardText>
     </form>
   </Card>
+  </Container>
 );
 
 SignUpForm.propTypes = {

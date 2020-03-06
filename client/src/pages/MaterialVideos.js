@@ -57,7 +57,7 @@ export default function MaterialVideo() {
             })
             .catch(err => console.log(err));
 
-        API.getPilatesPlaylists()
+        API.getCyclingPlaylists()
             .then(res => {
                 setCyclingVideos(res.data.items)
             })

@@ -20,7 +20,7 @@ import DashboardPage from './pages/DashboardPage.jsx';
 
 import Auth from './utils/Auth';
 
-import Container from '@material-ui/core/Container';
+
 import ButtonAppBar from "./components/ButtonAppBar";
 import MaterialVideo from "./pages/MaterialVideos";
 import Workouts from "./pages/Workouts";
@@ -48,17 +48,18 @@ class App extends Component {
 render() {
     return (
       <Router>
-        <div>
+        
         <div>
         <ButtonAppBar />
+        
         <br></br>
         <div style={{ height: 'calc(100vh - 64px)', backgroundImage: `url(/images/Background_Image.jpg)`, backgroundSize: 'cover', }}>
           <Switch>
-            <Route exact path="/" component={MaterialVideo} />
-            <Route path="/Workouts" component={Workouts} />
+            <Route exact path="/materialvideo" component={MaterialVideo} />
+            <Route path="/workouts" component={Workouts} />
           </Switch>
-        </div>
-      </div>
+        
+      
       <div>
         <div className="top-bar">
           <div className="top-bar-left">
@@ -71,7 +72,7 @@ render() {
             </div>
           ) : (
             <div className="top-bar-right">
-              <Link to="/login">Log in</Link>
+              <Link exact to="/login">Log in</Link>
               <br></br>
               <Link to="/signup">Sign up</Link>
             </div>
@@ -85,8 +86,11 @@ render() {
         <LoggedOutRoute path="/signup" component={SignUpPage}/>
         <Route path="/logout" component={LogoutFunction}/>
       </div>
+      
+      
       </div>
-
+      </div>
+      
     </Router>
       
     )
