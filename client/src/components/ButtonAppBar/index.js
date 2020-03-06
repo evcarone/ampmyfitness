@@ -34,6 +34,9 @@ export default function ButtonAppBar() {
           </Typography>
               <Button><Link style={{color: "white", }} to={"/workouts"}>Workouts</Link></Button>
               <Button><Link style={{color: "white", }} to={"/"} color="inherit">Home</Link></Button>
+              <Button><Link style={{color: "white", }} to="/dashboard">Dashboard</Link></Button>
+              <Button><Link style={{color: "white", }} to="/logout">Log out</Link></Button>
+              <Button><Link style={{color: "white", }} exact to="/login">Log in</Link></Button>
         </Toolbar>
       </AppBar>
     </div>
