@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 // import injectTapEventPlugin from 'react-tap-event-plugin';
-
 import { BrowserRouter as Router,
-Switch,
 Route,
 Link} from "react-router-dom";
 
@@ -20,10 +18,9 @@ import DashboardPage from './pages/DashboardPage.jsx';
 
 import Auth from './utils/Auth';
 
-
-import ButtonAppBar from "./components/ButtonAppBar";
-import MaterialVideo from "./pages/MaterialVideos";
-import Workouts from "./pages/Workouts";
+// import Container from '@material-ui/core/Container';
+// import ButtonAppBar from "./components/ButtonAppBar";
+// import MaterialVideo from "./pages/MaterialVideos";
 
 // remove tap delay, essential for MaterialUI to work properly
 // injectTapEventPlugin();
@@ -44,22 +41,9 @@ class App extends Component {
     }
 
 
-
 render() {
     return (
       <Router>
-        
-        <div>
-        <ButtonAppBar />
-        
-        <br></br>
-        <div style={{ height: 'calc(100vh - 64px)', backgroundImage: `url(/images/Background_Image.jpg)`, backgroundSize: 'cover', }}>
-          <Switch>
-            <Route exact path="/materialvideo" component={MaterialVideo} />
-            <Route path="/workouts" component={Workouts} />
-          </Switch>
-        
-      
       <div>
         <div className="top-bar">
           <div className="top-bar-left">
@@ -72,7 +56,7 @@ render() {
             </div>
           ) : (
             <div className="top-bar-right">
-              <Link exact to="/login">Log in</Link>
+              <Link to="/login">Log in</Link>
               <br></br>
               <Link to="/signup">Sign up</Link>
             </div>
@@ -86,41 +70,11 @@ render() {
         <LoggedOutRoute path="/signup" component={SignUpPage}/>
         <Route path="/logout" component={LogoutFunction}/>
       </div>
-      
-      
-      </div>
-      </div>
-      
+
     </Router>
       
     )
   }
-
 }
-
-
-
-
-// function App() {
-
-
-
-//   return (
-//     <Router>
-//       <div>
-//         <ButtonAppBar />
-//         <br></br>
-//         <div style={{ height: 'calc(100vh - 64px)', backgroundImage: `url(/images/Background_Image.jpg)`, backgroundSize: 'cover', }}>
-//           <Switch>
-//             <Route exact path="/" component={MaterialVideo} />
-//             <Route path="/Workouts" component={Workouts} />
-//           </Switch>
-//         </div>
-//       </div>
-
-//     </Router>
-
-//   );
-// }
 
 export default App;
