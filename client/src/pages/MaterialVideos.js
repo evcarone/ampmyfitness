@@ -74,15 +74,15 @@ export default function MaterialVideo() {
     return (
         <div className={classes.root} >
 
-<Container>
+<Container style={{ marginTop: "50px" }} >
             {/* Yoga */}
-            <ExpansionPanel>
+            <ExpansionPanel style={{background: "#a7b881"}}>
                 <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                 >
-                    <Typography className={classes.heading}><strong>Yoga</strong> </Typography> <EmojiPeopleIcon />
+                    <Typography style={{ margin: "10px", fontSize: "18px" }} className={classes.heading}><strong>Yoga&nbsp;&nbsp;</strong><EmojiPeopleIcon style={{ fontSize: 25 }}/> </Typography>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails style={{ maxHeight: 600, overflow: 'auto', justifyContent: "center" }}>
                     <Typography justify="center">
@@ -94,13 +94,13 @@ export default function MaterialVideo() {
             </ExpansionPanel>
 
             {/* Running */}
-            <ExpansionPanel>
+            <ExpansionPanel style={{background: "#76badb"}}>
                 <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                 >
-                    <Typography className={classes.heading}> <strong>Running</strong> </Typography><DirectionsRunIcon></DirectionsRunIcon>
+                    <Typography style={{ margin: "10px", fontSize: "18px" }} className={classes.heading}> <strong>Running&nbsp;&nbsp;</strong><DirectionsRunIcon style={{ fontSize: 25 }}/></Typography>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails style={{ maxHeight: 500, overflow: 'auto', justifyContent: "center" }}>
                     <Typography>
@@ -112,13 +112,13 @@ export default function MaterialVideo() {
             </ExpansionPanel>
 
             {/* High Intensity Interval Training */}
-            <ExpansionPanel>
+            <ExpansionPanel style={{background: "#d86346"}}>
                 <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                 >
-                    <Typography style={{ margin: "3px" }} className={classes.heading}> <strong>High Intensity Interval Training</strong> </Typography> <TransferWithinAStationIcon ></TransferWithinAStationIcon>
+                    <Typography style={{ margin: "10px", fontSize: "18px" }}  className={classes.heading}> <strong>High Intensity Interval Training&nbsp;&nbsp;</strong><TransferWithinAStationIcon style={{ fontSize: 25 }}/></Typography> 
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails style={{ maxHeight: 500, overflow: 'auto', justifyContent: "center" }}>
                     <Typography>
@@ -130,13 +130,13 @@ export default function MaterialVideo() {
             </ExpansionPanel>
 
             {/* Cycling */}
-            <ExpansionPanel>
+            <ExpansionPanel style={{background: "#d0c44c"}}>
                 <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                 >
-                    <Typography style={{ margin: "3px" }} className={classes.heading}> <strong>Cycling</strong> </Typography> <DirectionsBikeIcon ></DirectionsBikeIcon>
+                    <Typography style={{ margin: "10px", fontSize: "18px" }}  className={classes.heading}> <strong>Cycling&nbsp;&nbsp;</strong><DirectionsBikeIcon style={{ fontSize: 25 }}/></Typography> 
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails style={{ maxHeight: 500, overflow: 'auto', justifyContent: "center" }}>
                     <Typography>
@@ -148,13 +148,13 @@ export default function MaterialVideo() {
             </ExpansionPanel>
 
             {/* Pilates */}
-            <ExpansionPanel>
+            <ExpansionPanel style={{background: "#76badb"}}>
                 <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                 >
-                    <Typography style={{ margin: "3px" }} className={classes.heading}> <strong>Pilates</strong> </Typography> <AccessibilityIcon ></AccessibilityIcon>
+                    <Typography style={{ margin: "10px", fontSize: "18px" }}  className={classes.heading}> <strong>Pilates&nbsp;&nbsp;</strong><AccessibilityIcon style={{ fontSize: 25 }}/></Typography> 
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails style={{ maxHeight: 550, overflow: 'auto', justifyContent: "center" }}>
                     <Typography>
