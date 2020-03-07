@@ -20,10 +20,10 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+
 export default function ButtonAppBar() {
   const classes = useStyles();
 
-  
 
   return (
     <div className={classes.root}>
@@ -32,11 +32,6 @@ export default function ButtonAppBar() {
           <Typography variant="h6" className={classes.title}>
             Amp My Workout!
           </Typography>
-              <Button><Link style={{color: "white", }} to={"/workouts"}>Workouts</Link></Button>
-              <Button><Link style={{color: "white", }} to={"/"} color="inherit">Home</Link></Button>
-              <Button><Link style={{color: "white", }} to="/dashboard">Dashboard</Link></Button>
-              <Button><Link style={{color: "white", }} to="/logout">Log out</Link></Button>
-              <Button><Link style={{color: "white", }} exact to="/login">Log in</Link></Button>
         </Toolbar>
       </AppBar>
     </div>
