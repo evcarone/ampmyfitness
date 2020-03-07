@@ -8,6 +8,7 @@ import Card from '@material-ui/core/Card';
 import Container from '@material-ui/core/Container';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
+import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
 
 
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -17,6 +18,8 @@ import arms from "../utils/workoutGroups/arms"
 import abs from "../utils/workoutGroups/abs"
 import back from "../utils/workoutGroups/back"
 import chest from "../utils/workoutGroups/chest"
+import legs from "../utils/workoutGroups/legs"
+import shoulders from "../utils/workoutGroups/shoulders"
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -36,21 +39,23 @@ export default function Workouts() {
     const [abWorkouts, setAbWorkouts] = useState(abs)
     const [backWorkouts, setBackWorkouts] = useState(back)
     const [chestWorkouts, setChestWorkouts] = useState(chest)
+    const [legWorkouts, setLegWorkouts] = useState(legs)
+    const [shoulderWorkouts, setShoulderWorkouts] = useState(shoulders)
 
     return (
         <div className={classes.root} >
 
-            <Container>
+            <Container style={{ marginTop: "50px" }}>
 
                 {/* Arms */}
-                <ExpansionPanel>
+                <ExpansionPanel style={{background: "#d0c44c"}}>
 
                     <ExpansionPanelSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel2a-content"
                         id="panel2a-header"
                     >
-                        <Typography style={{ margin: "3px" }} className={classes.heading}> <strong>Arms</strong> </Typography>
+                        <Typography style={{ margin: "10px" }} className={classes.heading}> <strong>Arms</strong> </Typography>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails style={{ maxHeight: 500, overflow: 'auto', justifyContent: "center" }}>
                         <Typography>
@@ -66,14 +71,14 @@ export default function Workouts() {
                 </ExpansionPanel>
 
                 {/* Back */}
-                <ExpansionPanel>
+                <ExpansionPanel style={{background: "#d0c44c"}}>
 
                     <ExpansionPanelSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel2a-content"
                         id="panel2a-header"
                     >
-                        <Typography style={{ margin: "3px" }} className={classes.heading}> <strong>Back</strong> </Typography>
+                        <Typography style={{ margin: "10px" }} className={classes.heading}> <strong>Back</strong> </Typography>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails style={{ maxHeight: 500, overflow: 'auto', justifyContent: "center" }}>
                         <Typography>
@@ -89,14 +94,14 @@ export default function Workouts() {
                 </ExpansionPanel>
 
                 {/* Abs */}
-                <ExpansionPanel>
+                <ExpansionPanel style={{background: "#d0c44c"}}>
 
                     <ExpansionPanelSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel2a-content"
                         id="panel2a-header"
                     >
-                        <Typography style={{ margin: "3px" }} className={classes.heading}> <strong>Abs</strong> </Typography>
+                        <Typography style={{ margin: "10px" }} className={classes.heading}> <strong>Abs</strong> </Typography>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails style={{ maxHeight: 500, overflow: 'auto', justifyContent: "center" }}>
                         <Typography>
@@ -112,14 +117,14 @@ export default function Workouts() {
                 </ExpansionPanel>
 
                 {/* Chest */}
-                <ExpansionPanel>
+                <ExpansionPanel style={{background: "#d0c44c"}}>
 
                     <ExpansionPanelSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel2a-content"
                         id="panel2a-header"
                     >
-                        <Typography style={{ margin: "3px" }} className={classes.heading}> <strong>Chest</strong> </Typography>
+                        <Typography style={{ margin: "10px" }} className={classes.heading}> <strong>Chest</strong> </Typography>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails style={{ maxHeight: 500, overflow: 'auto', justifyContent: "center" }}>
                         <Typography>
@@ -133,7 +138,49 @@ export default function Workouts() {
                         </Typography>
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
+                {/* Legs */}
+                <ExpansionPanel style={{background: "#d0c44c"}}>
 
+                    <ExpansionPanelSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel2a-content"
+                        id="panel2a-header"
+                    >
+                        <Typography style={{ margin: "10px" }} className={classes.heading}> <strong>Legs</strong> </Typography>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails style={{ maxHeight: 500, overflow: 'auto', justifyContent: "center" }}>
+                        <Typography>
+                            {legWorkouts.map(workout => (
+                                <div>
+                                    <WorkoutCard name={workout.name} equipment={workout.equipment} description={workout.description} img_start={workout.img_start} img_end={workout.img_end}></WorkoutCard>
+                                    <br></br>
+                                </div>
+                            ))}
+                            
+                        </Typography>
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
+                {/* Legs */}
+                <ExpansionPanel style={{background: "#d0c44c"}}>
+
+                    <ExpansionPanelSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel2a-content"
+                        id="panel2a-header"
+                    >
+                        <Typography style={{ margin: "10px" }} className={classes.heading}> <strong>Shoulders</strong> </Typography>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails style={{ maxHeight: 500, overflow: 'auto', justifyContent: "center" }}>
+                        <Typography>
+                            {shoulderWorkouts.map(workout => (
+                                <div>
+                                    <WorkoutCard name={workout.name} equipment={workout.equipment} description={workout.description} img_start={workout.img_start} img_end={workout.img_end}></WorkoutCard>
+                                    <br></br>
+                                </div>
+                            ))}
+                        </Typography>
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
             </Container>
         </div>
     );

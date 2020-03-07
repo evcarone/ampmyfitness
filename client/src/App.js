@@ -47,15 +47,17 @@ class App extends Component {
 
 render() {
     return (
-      <Router>
+      <Router style={{ height: "200px"}}>
         
         <div>
         <ButtonAppBar />
         
-        <br></br>
+        
         <div style={{ height: 'calc(100vh - 64px)', backgroundImage: `url(/images/Background_Image.jpg)`, backgroundSize: 'cover', }}>
+
+        <br></br>
           <Switch>
-            <Route exact path="/materialvideo" component={MaterialVideo} />
+            <Route exact path="/videos" component={MaterialVideo} />
             <Route path="/workouts" component={Workouts} />
           </Switch>
         

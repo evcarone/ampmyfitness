@@ -1,4 +1,4 @@
-export const chest = [
+const chest = [
     {
         name: "Bench Press",
         equiptment: "Barbell & Bench",
@@ -40,4 +40,4 @@ export const chest = [
         muscles: "Pectoralis major & Triceps brachii",
     },
 ]
-export default chest
+export default chest;
