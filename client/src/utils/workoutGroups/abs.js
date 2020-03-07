@@ -1,4 +1,4 @@
-export const abs = [
+const abs = [
     {
         name: "Crunches",
         equiptment: "Bench & Gym Mat",

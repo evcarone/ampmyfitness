@@ -20,7 +20,7 @@ export default function WorkoutCard(props) {
     const classes = useStyles();
 
     return (
-        <Card style={{ margin: "auto", width: "100%", height: "100%", backgroundColor: "#f5f5f5" }} className={classes.root}>
+        <Card style={{ margin: "auto", width: "75%", height: "100%", backgroundColor: "white", paddingBottom: "25px" }} className={classes.root}>
 
 
         <CardContent>
@@ -28,14 +28,14 @@ export default function WorkoutCard(props) {
                 <strong>{props.name}</strong>
             </Typography>
             <hr></hr>
-            <Typography gutterBottom variant="h5" component="h2">
-                <strong>Equipment Required: </strong>{props.equipment}
+            <Typography gutterBottom variant="h6" component="h2">
+                <p style={{ fontSize: "18px"}}><strong>Equipment Required:</strong> {props.equipment}</p>
             </Typography>
 
             <hr></hr>
 
-            <Typography gutterBottom variant="h5" component="h2">
-                <strong>Description: </strong> {props.description}
+            <Typography gutterBottom variant="h6" component="h2">
+            <p style={{ fontSize: "16px"}}><strong>Description: </strong> {props.description}</p>
             </Typography>
 
         </CardContent>

@@ -5,6 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { Link } from "react-router-dom";
 import Button from '@material-ui/core/Button';
+import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
 
 
 
@@ -27,10 +28,10 @@ export default function LoggedInButtonAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" style={{ background: "#2b4e7e"}}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            Amp My Workout!
+            Amp My Workout&nbsp;&nbsp;<FitnessCenterIcon />
           </Typography>
               <Button><Link style={{color: "white", }} to={"/workouts"}>Workouts</Link></Button>
               <Button><Link style={{color: "white", }} to={"/videos"} color="inherit">Videos</Link></Button>
