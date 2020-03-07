@@ -148,7 +148,7 @@ export default function MaterialVideo() {
             </ExpansionPanel>
 
             {/* Pilates */}
-            <ExpansionPanel style={{background: "#76badb"}}>
+            <ExpansionPanel style={{ background: "#2b4e7e" }}>
                 <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel2a-content"

@@ -25,17 +25,17 @@ const LoginForm = ({
     
   <Container>
     
-    <div style={{ backgroundColor: "#fafafa", width: "40%", margin: "auto",  borderRadius: "15", position: "relative"}}>
+    <div style={{ backgroundColor: "#fafafa", width: "40%", margin: "auto",  borderRadius: "15", position: "relative" }}>
 
   
   <form action="/videos" onSubmit={onSubmit} >
   <div class="jumbotron" >
-        <h1 class="display-4">Log Into Your Account!</h1>
+        <h1 style={{ fontSize: "40px" }} class="display-4">Log Into Your Account!</h1>
 
         {successMessage && <p className="success-message">{successMessage}</p>}
       {errors.summary && <p className="error-message">{errors.summary}</p>}
           
-            <TextField label="Email"
+            <TextField style={{ width: "100%", marginTop: "20px" }} label="Email"
           name="email"
           error={errors.email}
           helperText={ errors.email || null }
@@ -44,7 +44,7 @@ const LoginForm = ({
           
 <br></br>
           
-            <TextField label="Password"
+            <TextField style={{ width: "100%", marginTop: "20px", marginBottom: "20px" }} label="Password"
           type="password"
           name="password"
           onChange={onChange}
@@ -54,7 +54,7 @@ const LoginForm = ({
 
         <hr class="my-4"></hr>
         <div className="button-line">
-        <Button type="submit" variant="contained" color="primary" children="Log in" primary />
+        <Button style={{ background: "#2b4e7e", color: "white" }} type="submit" variant="contained" children="Log in" primary/>
       </div>
 <br></br>
       <Typography >Don't have an account? <Link to={'/signup'}>Create one</Link>.</Typography>

@@ -18,18 +18,18 @@ const SignUpForm = ({
 
 <ButtonAppBar></ButtonAppBar>
 
-  <div style={{ height: 'calc(100vh - 60px)', backgroundImage: `url(/images/Background_Image.jpg)`, backgroundSize: 'cover', display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
+  <div style={{ height: 'calc(100vh - 60px)', backgroundImage: `url(/images/Background_Image.jpg)`, backgroundSize: 'cover', display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
     
   <Container>
   
-    <div style={{ backgroundColor: "#fafafa", width: "40%",  margin: "auto", borderRadius: "15", postion: "relative",}}>
+    <div style={{ backgroundColor: "#fafafa", width: "40%",  margin: "auto", borderRadius: "15", postion: "relative" }}>
   <form action="/" onSubmit={onSubmit} >
   <div class="jumbotron">
-        <h1 class="display-4">Sign Up!</h1>
+        <h1 style={{ fontSize: "40px" }} class="display-4">Sign Up!</h1>
 
         {errors.summary && <p className="error-message">{errors.summary}</p>}
           
-        <TextField placeholder="Name"
+        <TextField style={{ width: "100%", marginBottom: "20px", marginTop: "20px" }} placeholder="Name"
           floatinglabeltext="Email"
           name="name"
           errortext={errors.name}
@@ -39,7 +39,7 @@ const SignUpForm = ({
 
 <br></br>
           
-          <TextField placeholder="Email"
+          <TextField style={{ width: "100%", marginBottom: "20px" }} placeholder="Email"
           floatinglabeltext="Email"
           name="email"
           errortext={errors.email}
@@ -48,7 +48,7 @@ const SignUpForm = ({
           
 <br></br>
           
-            <TextField placeholder="Password"
+            <TextField style={{ width: "100%" }} placeholder="Password"
           floatinglabeltext="Password"
           type="password"
           name="password"
@@ -59,7 +59,7 @@ const SignUpForm = ({
 
         <hr class="my-4"></hr>
         <div className="button-line">
-        <Button type="submit" variant="contained" color="primary" children="Log in" primary> Create Account</Button>
+        <Button style={{ background: "#2b4e7e", color: "white" }} type="submit" variant="contained" children="Log in" primary> Create Account</Button>
       </div>
 <br></br>
       <Typography >Already Have an Account? <Link to={'/login'}>Sign In</Link>.</Typography>
