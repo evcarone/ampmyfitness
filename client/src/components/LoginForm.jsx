@@ -21,11 +21,11 @@ const LoginForm = ({
 
     <ButtonAppBar></ButtonAppBar>
     
-  <div style={{ height: 'calc(100vh - 60px)', backgroundImage: `url(/images/Background_Image.jpg)`, backgroundSize: 'cover', marginBottom: "0"}}>
+  <div style={{ height: 'calc(100vh - 60px)', backgroundImage: `url(/images/Background_Image.jpg)`, backgroundSize: 'cover', display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
     
   <Container>
     
-    <div style={{ backgroundColor: "#fafafa", width: "40%", height: "40vh", margin: "auto",  borderRadius: "15", marginBottom: "15%"}}>
+    <div style={{ backgroundColor: "#fafafa", width: "40%", margin: "auto",  borderRadius: "15", position: "relative"}}>
 
   
   <form action="/videos" onSubmit={onSubmit} >
