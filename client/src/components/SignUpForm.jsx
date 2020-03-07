@@ -1,8 +1,6 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import Card from '@material-ui/core/Card';
-import CardText from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Container from '@material-ui/core/Container';
@@ -16,17 +14,20 @@ const SignUpForm = ({
   errors,
   user,
 }) => (
-  <div style={{ height: 'calc(100vh - 64px)', backgroundImage: `url(/images/Background_Image.jpg)`, backgroundSize: 'cover', }}>
+  <Fragment>
+
+<ButtonAppBar></ButtonAppBar>
+
+  <div style={{ height: 'calc(100vh - 60px)', backgroundImage: `url(/images/Background_Image.jpg)`, backgroundSize: 'cover', display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
     
-  <ButtonAppBar></ButtonAppBar>
   <Container>
-  {errors.summary && <p className="error-message">{errors.summary}</p>}
-    <div style={{ backgroundColor: "#fafafa", width: "40%", height: "40vh", margin: "auto", marginTop: "15%", borderRadius: "15"}}>
+  
+    <div style={{ backgroundColor: "#fafafa", width: "40%",  margin: "auto", borderRadius: "15", postion: "relative",}}>
   <form action="/" onSubmit={onSubmit} >
   <div class="jumbotron">
         <h1 class="display-4">Sign Up!</h1>
 
-
+        {errors.summary && <p className="error-message">{errors.summary}</p>}
           
         <TextField placeholder="Name"
           floatinglabeltext="Email"
@@ -67,6 +68,8 @@ const SignUpForm = ({
       </div>
       </Container>
       </div>
+
+      </Fragment>
 );
 
 SignUpForm.propTypes = {
