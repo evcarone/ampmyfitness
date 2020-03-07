@@ -4,6 +4,7 @@ import CardTitle from '@material-ui/core/Card';
 import CardText from '@material-ui/core/Card';
 import Auth from '../utils/Auth';
 import Container from '@material-ui/core/Container';
+import LoginPage from '../pages/LoginPage';
 
 
 class HomePage extends React.Component {
@@ -21,7 +22,7 @@ class HomePage extends React.Component {
           {Auth.isUserAuthenticated() ? (
             <CardText style={{ fontSize: '16px', color: 'green' }}>Welcome! You are logged in.</CardText>
           ) : (
-            <CardText style={{ fontSize: '16px', color: 'green' }}>You are not logged in.</CardText>
+            <LoginPage></LoginPage>
           )}
       </Card>
       </Container>
