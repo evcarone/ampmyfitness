@@ -26,8 +26,6 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-
-
 export default function MaterialVideo() {
     const [yogaVideos, setYogaVideos] = useState([])
     const [runningVideos, setRunningVideos] = useState([])
