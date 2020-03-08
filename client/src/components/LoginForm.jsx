@@ -1,8 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import Card from '@material-ui/core/Card';
-import CardText from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Container from '@material-ui/core/Container';
@@ -29,13 +27,13 @@ const LoginForm = ({
 
   
   <form action="/videos" onSubmit={onSubmit} >
-  <div class="jumbotron" >
-        <h1 class="display-4">Log Into Your Account!</h1>
+  <div className="jumbotron" >
+        <h1 class="display-4" style={{fontSize: "300%"}}>Log Into Your Account!</h1>
 
         {successMessage && <p className="success-message">{successMessage}</p>}
       {errors.summary && <p className="error-message">{errors.summary}</p>}
           
-            <TextField label="Email"
+            <TextField style={{width: "100%"}} label="Email"
           name="email"
           error={errors.email}
           helperText={ errors.email || null }
@@ -44,7 +42,7 @@ const LoginForm = ({
           
 <br></br>
           
-            <TextField label="Password"
+            <TextField style={{width: "100%"}} label="Password"
           type="password"
           name="password"
           onChange={onChange}
