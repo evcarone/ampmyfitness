@@ -91,4 +91,11 @@
     color: green;
   }
   
+  .classes.root {
+    display: "flex";
+    justify-Content: "center";
+    padding-Top: "250px";
+    margin-Right: "20px";
+    margin-Left: "20px";
+  }
 
