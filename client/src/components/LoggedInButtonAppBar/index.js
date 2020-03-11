@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -39,6 +39,7 @@ class LoggedInButtonAppBar extends React.Component {
             <Typography variant="h6" style={{ textAlign: 'center', flexGrow: 1 }}>
               Amp My Workout&nbsp;&nbsp;<FitnessCenterIcon />
             </Typography>
+            <Button><Link style={{color: "white", }} to={"/home"}>Home</Link></Button>
             <Button><Link style={{ color: "white", }} to={"/workouts"}>Workouts</Link></Button>
             <Button><Link style={{ color: "white", }} to={"/videos"} color="inherit">Videos</Link></Button>
             <Button><Link style={{ color: "white", }} to="/logout">Log out</Link></Button>

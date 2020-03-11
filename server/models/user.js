@@ -8,7 +8,15 @@ const UserSchema = new mongoose.Schema({
     index: { unique: true }
   },
   password: String,
-  name: String
+  name: String,
+  height: String,
+  weights: [{
+    day: {
+      type: Date,
+      default: () => new Date()
+    },
+    weight: Number,
+  }]
 });
 
 

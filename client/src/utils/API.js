@@ -28,10 +28,6 @@ export default {
     return axios.get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${pilatesPlaylistId}&key=${APIKey2}`);
   }
 }
-//   // getPlaylists: function() {
-//   //   return axios.get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PL5TOTBNdO-gZvLIo-tPxNMyPwAwpHliol&key=AIzaSyDYrjg7hzSQAr0gK0-hxVillcmwo-yx9Tc`);
-//   }
-// }
 
 const yogaPlaylistId = "PL5TOTBNdO-gZvLIo-tPxNMyPwAwpHliol"
 const runningPlaylistId = "PL5TOTBNdO-gbOfPl9WvfhL4mCM8BYr9nH"

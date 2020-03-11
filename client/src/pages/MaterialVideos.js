@@ -74,7 +74,7 @@ export default function MaterialVideo() {
 
 <Container style={{ marginTop: "50px" }} >
             {/* Yoga */}
-            <ExpansionPanel style={{background: "#a7b881"}}>
+            <ExpansionPanel style={{background: "#ed94ff"}}>
                 <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"

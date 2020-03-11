@@ -24,12 +24,14 @@ const SignUpForm = ({
   
     <div style={{ backgroundColor: "#fafafa", width: "40%",  margin: "auto", borderRadius: "15", postion: "relative" }}>
   <form action="/" onSubmit={onSubmit} >
-  <div class="jumbotron">
-        <h1 style={{ fontSize: "40px" }} class="display-4">Sign Up!</h1>
+  <div className="jumbotron">
+        <h2 class="display-4">Sign Up!</h2>
+
+        <br></br>
 
         {errors.summary && <p className="error-message">{errors.summary}</p>}
           
-        <TextField style={{ width: "100%", marginBottom: "20px", marginTop: "20px" }} placeholder="Name"
+        <TextField style={{width: "100%"}} placeholder="Name"
           floatinglabeltext="Email"
           name="name"
           errortext={errors.name}
@@ -38,8 +40,9 @@ const SignUpForm = ({
 
 
 <br></br>
+<br></br>
           
-          <TextField style={{ width: "100%", marginBottom: "20px" }} placeholder="Email"
+          <TextField style={{width: "100%"}} placeholder="Email"
           floatinglabeltext="Email"
           name="email"
           errortext={errors.email}
@@ -47,8 +50,9 @@ const SignUpForm = ({
           value={user.email}> </TextField>
           
 <br></br>
+<br></br>
           
-            <TextField style={{ width: "100%" }} placeholder="Password"
+            <TextField style={{width: "100%"}} placeholder="Password"
           floatinglabeltext="Password"
           type="password"
           name="password"
@@ -61,6 +65,7 @@ const SignUpForm = ({
         <div className="button-line">
         <Button style={{ background: "#2b4e7e", color: "white" }} type="submit" variant="contained" children="Log in" primary> Create Account</Button>
       </div>
+<br></br>
 <br></br>
       <Typography >Already Have an Account? <Link to={'/login'}>Sign In</Link>.</Typography>
       </div>
