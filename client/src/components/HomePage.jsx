@@ -9,10 +9,7 @@ import LoginPage from '../pages/LoginPage';
 
 class HomePage extends React.Component {
 
-  componentDidMount() {
-    // update authenticated state on logout
-    this.props.toggleAuthenticateStatus()
-  }
+  
 
   render() {
     return (
