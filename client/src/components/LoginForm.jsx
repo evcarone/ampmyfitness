@@ -23,10 +23,10 @@ const LoginForm = ({
     
   <Container>
     
-    <div style={{ backgroundColor: "#fafafa", width: "40%", margin: "auto",  borderRadius: "15", position: "relative"}}>
+    <div style={{ backgroundColor: "#fafafa", width: "40%", margin: "auto",  borderRadius: "15", position: "relative" }}>
 
   
-  <form action="/videos" onSubmit={onSubmit} >
+  <form action="/" onSubmit={onSubmit} >
   <div className="jumbotron" >
         <h1 class="display-4" style={{fontSize: "300%"}}>Log Into Your Account!</h1>
 
@@ -52,7 +52,7 @@ const LoginForm = ({
 
         <hr class="my-4"></hr>
         <div className="button-line">
-        <Button type="submit" variant="contained" color="primary" children="Log in" primary />
+        <Button style={{ background: "#2b4e7e", color: "white" }} type="submit" variant="contained" children="Log in" primary/>
       </div>
 <br></br>
       <Typography >Don't have an account? <Link to={'/signup'}>Create one</Link>.</Typography>
@@ -78,44 +78,3 @@ LoginForm.propTypes = {
 
 export default LoginForm;
 
-{/* <Container>
-    <div style={{ backgroundColor: "#fafafa", width: "40%", height: "40vh", margin: "auto", marginTop: "25%", borderRadius: "15"}}>
-    <form action="/" onSubmit={onSubmit}>
-
-      <h2 className="card-heading">Log into your account</h2>
-
-      {successMessage && <p className="success-message">{successMessage}</p>}
-      {errors.summary && <p className="error-message">{errors.summary}</p>}
-
-
-      <div className="field-line">
-        <TextField
-          label="Email"
-          name="email"
-          error={errors.email}
-          helperText={ errors.email || null }
-          onChange={onChange}
-          value={user.email}
-        />
-      </div>
-
-      <div className="field-line">
-        <TextField
-          label="Password"
-          type="password"
-          name="password"
-          onChange={onChange}
-          error={errors.password}
-          value={user.password}
-        />
-      </div>
-
-      <div className="button-line">
-        <Button type="submit" children="Log in" primary />
-      </div>
-
-      {/* <CardText style={{ backgroundColor: "#fafafa"}}>Don't have an account? <Link to={'/signup'}>Create one</Link>.</CardText> */}
-      
-  //   </form>
-  // </div>
-  // </Container> */}

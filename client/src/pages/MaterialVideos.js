@@ -26,8 +26,6 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-
-
 export default function MaterialVideo() {
     const [yogaVideos, setYogaVideos] = useState([])
     const [runningVideos, setRunningVideos] = useState([])
@@ -76,7 +74,7 @@ export default function MaterialVideo() {
 
 <Container style={{ marginTop: "50px" }} >
             {/* Yoga */}
-            <ExpansionPanel style={{background: "#a7b881"}}>
+            <ExpansionPanel style={{background: "#ed94ff"}}>
                 <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
@@ -148,7 +146,7 @@ export default function MaterialVideo() {
             </ExpansionPanel>
 
             {/* Pilates */}
-            <ExpansionPanel style={{background: "#76badb"}}>
+            <ExpansionPanel style={{ background: "#2b4e7e" }}>
                 <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel2a-content"

@@ -18,11 +18,11 @@ const SignUpForm = ({
 
 <ButtonAppBar></ButtonAppBar>
 
-  <div style={{ height: 'calc(100vh - 60px)', backgroundImage: `url(/images/Background_Image.jpg)`, backgroundSize: 'cover', display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
+  <div style={{ height: 'calc(100vh - 60px)', backgroundImage: `url(/images/Background_Image.jpg)`, backgroundSize: 'cover', display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
     
   <Container>
   
-    <div style={{ backgroundColor: "#fafafa", width: "40%",  margin: "auto", borderRadius: "15", postion: "relative",}}>
+    <div style={{ backgroundColor: "#fafafa", width: "40%",  margin: "auto", borderRadius: "15", postion: "relative" }}>
   <form action="/" onSubmit={onSubmit} >
   <div className="jumbotron">
         <h2 class="display-4">Sign Up!</h2>
@@ -63,7 +63,7 @@ const SignUpForm = ({
 
         <hr class="my-4"></hr>
         <div className="button-line">
-        <Button type="submit" variant="contained" color="primary" children="Log in" primary> Create Account</Button>
+        <Button style={{ background: "#2b4e7e", color: "white" }} type="submit" variant="contained" children="Log in" primary> Create Account</Button>
       </div>
 <br></br>
 <br></br>
