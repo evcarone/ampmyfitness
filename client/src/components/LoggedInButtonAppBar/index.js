@@ -6,31 +6,36 @@ import Typography from '@material-ui/core/Typography';
 import { Link } from "react-router-dom";
 import Button from '@material-ui/core/Button';
 import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle'
+import API from '../../utils/API';
+import Auth from '../../utils/Auth';
 
+class LoggedInButtonAppBar extends React.Component {
+  state = {
+    secretData: '',
+    user: {}
+  }
 
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-  },
-}));
-
-export default function LoggedInButtonAppBar() {
-  const classes = useStyles();
-
+  /**
+   * This method will be executed after initial rendering.
+   */
+  componentDidMount() {
+    API.dashboard(Auth.getToken())
+    .then(res => {
+      this.setState({
+          secretData: res.data.message,
+          user: res.data.user
+        });
+    })
+  }
   
-
+  render() {
   return (
-    <div className={classes.root}>
+    <div style={{ flexGrow: "1" }}>
       <AppBar position="static" style={{ background: "#2b4e7e"}}>
         <Toolbar>
-          <Typography variant="h6" className={classes.title}>
+        <AccountCircleIcon fontSize="large"/>&nbsp;&nbsp;{this.state.user.name}
+          <Typography style={{ textAlign: "center", fontSize: "24px", flexGrow: "1"  }}>
             Amp My Workout&nbsp;&nbsp;<FitnessCenterIcon />
           </Typography>
               <Button><Link style={{color: "white", }} to={"/workouts"}>Workouts</Link></Button>
@@ -41,4 +46,7 @@ export default function LoggedInButtonAppBar() {
     </div>
   );
 }
+}
+
+export default LoggedInButtonAppBar;
 
