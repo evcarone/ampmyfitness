@@ -19,7 +19,7 @@ const useStyles = makeStyles({
 export default function RandomQuote() {
   const classes = useStyles();
 
-  // const [quotes, setQuotes] = useState(athleteQuotes)
+  // const [quotes, setQuotes] = useState(athleteQuotes) 
   console.log(athleteQuotes);
   return (
     <Card className={classes.root}>

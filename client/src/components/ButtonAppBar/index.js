@@ -5,6 +5,9 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { Link } from "react-router-dom";
 import Button from '@material-ui/core/Button';
+import TemporaryDrawer from '../TemporaryDrawer/TemporaryDrawer'
+import IconButton from '@material-ui/core/IconButton';
+
 
 import Workouts from "../../pages/Workouts";
 
@@ -29,6 +32,9 @@ export default function ButtonAppBar() {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
+        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <TemporaryDrawer/>
+          </IconButton>
           <Typography variant="h6" className={classes.title}>
             Amp My Workout!
           </Typography>

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import RandomQuote from "./components/randomQuotes/randomQuotes";
-// import injectTapEventPlugin from 'react-tap-event-plugin';
 import { BrowserRouter as Router,
 Switch,
 Route,
@@ -47,7 +46,7 @@ render() {
       <Router>
         
         <div>
-        <ButtonAppBar />
+        <ButtonAppBar/>
         
         <div style={{ height: 'calc(100vh - 64px)', backgroundImage: `url(/images/Background_Image.jpg)`, backgroundSize: 'cover', }}>
           
@@ -82,7 +81,7 @@ render() {
 
       
     </Router>
-      
+    
     )
   }
 
