@@ -32,7 +32,6 @@ class AuthVideos extends React.Component {
                 <LoggedInButtonAppBar></LoggedInButtonAppBar>
                 <div style={{ height: 'calc(100vh - 64px)', backgroundImage: `url(/images/Background_Image.jpg)`, backgroundSize: 'cover', }}>
                     <br></br>
-                    
                     <Workouts></Workouts>
                 </div>
                 </div>
