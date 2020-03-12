@@ -11,7 +11,7 @@ const arms = [
         name: "Dips",
         equipment: "Bars",
         description: "Hold onto the bars at a narrow place (if they are not parallel) and press yourself up, but don't stretch the arms completely, so the muscles stay during the whole exercise under tension. Now bend the arms and go down as much as you can, keeping the elbows always pointing back, At this point, you can make a short pause before repeating the movement.",
-        img_start: "https://wger.de/media/exercise-images/82/Tricep-dips-2-1.png",
+        img_start: "https://wger.de/media/exercise-images/82/Tricep-dips-2-1.png?size=10",
         img_end: "https://wger.de/media/exercise-images/82/Tricep-dips-2-2.png",
         muscles: "Pectoralis major, Rectus abdominis & Triceps brachii"
     },

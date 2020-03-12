@@ -51,7 +51,7 @@ class LoginPage extends React.Component {
         this.props.toggleAuthenticateStatus()
         
         // redirect signed in user to dashboard
-        this.props.history.push('/workouts');
+        this.props.history.push('/home');
         
     }).catch(( {response} ) => {
 

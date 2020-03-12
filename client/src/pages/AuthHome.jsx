@@ -1,8 +1,10 @@
 import React from 'react';
 import Auth from '../utils/Auth';
-import Workouts from "./Workouts"
 import API from '../utils/API';
+import RandomQuotes from "../components/RandomQuotes/index"
 import LoggedInButtonAppBar from "../components/LoggedInButtonAppBar/index"
+import WeightInputs from "../components/WeightInputs/index"
+
 
 class AuthVideos extends React.Component {
     state = {
@@ -30,15 +32,22 @@ class AuthVideos extends React.Component {
         return (
             <div>
                 <LoggedInButtonAppBar></LoggedInButtonAppBar>
-                <div style={{ height: 'calc(100vh - 64px)', backgroundImage: `url(/images/dU7Lxw.jpg)`, backgroundSize: 'cover', }}>
+                <div style={{ height: 'calc(100vh - 64px)', backgroundImage: `url(/images/dU7Lxw.jpg)`, backgroundSize: 'cover' }}>
                     <br></br>
-                    <Workouts></Workouts>
-                </div>
-                </div>
+                    <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '2%' }}>
+                        <RandomQuotes></RandomQuotes>
+                    </div>
 
-                );
-            }
-        
-        }
-        
+                    <br></br>
+                    
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        <WeightInputs></WeightInputs>
+                    </div>
+
+                </div>
+            </div>);
+    }
+
+}
+
 export default AuthVideos;

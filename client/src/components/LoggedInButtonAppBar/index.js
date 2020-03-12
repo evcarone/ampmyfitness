@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -9,6 +9,8 @@ import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle'
 import API from '../../utils/API';
 import Auth from '../../utils/Auth';
+import TemporaryDrawer from '../TemporaryDrawer/TemporaryDrawer';
+import IconButton from '@material-ui/core/IconButton'
 
 class LoggedInButtonAppBar extends React.Component {
   state = {
@@ -21,32 +23,33 @@ class LoggedInButtonAppBar extends React.Component {
    */
   componentDidMount() {
     API.dashboard(Auth.getToken())
-    .then(res => {
-      this.setState({
+      .then(res => {
+        this.setState({
           secretData: res.data.message,
           user: res.data.user
         });
-    })
+      })
   }
-  
+
+
   render() {
-  return (
-    <div style={{ flexGrow: "1" }}>
-      <AppBar position="static" style={{ background: "#2b4e7e"}}>
-        <Toolbar>
-        <AccountCircleIcon fontSize="large"/>&nbsp;&nbsp;{this.state.user.name}
-          <Typography style={{ textAlign: "center", fontSize: "24px", flexGrow: "1"  }}>
-            Amp My Workout&nbsp;&nbsp;<FitnessCenterIcon />
-          </Typography>
-              <Button><Link style={{color: "white", }} to={"/workouts"}>Workouts</Link></Button>
-              <Button><Link style={{color: "white", }} to={"/videos"} color="inherit">Videos</Link></Button>
-              <Button><Link style={{color: "white", }} to="/logout">Log out</Link></Button>
-        </Toolbar>
-      </AppBar>
-    </div>
-  );
-}
+    return (
+      <div style={{ flexGrow: 1 }}>
+        <AppBar position="static" style={{ background: "#003C57" }}>
+          <Toolbar>
+            <IconButton edge="start" color="inherit" aria-label="menu">
+              <TemporaryDrawer />
+            </IconButton>
+            <Typography variant="h5" align="center" style={{ flexGrow: 1, marginLeft: "25px" }}>
+              Amp My Workout
+            </Typography>
+            <Button style={{ color: "white" }}><AccountCircleIcon fontSize="large" />&nbsp;&nbsp;{this.state.user.name}</Button>
+          </Toolbar>
+        </AppBar>
+      </div>)
+  }
 }
 
 export default LoggedInButtonAppBar;
+
 

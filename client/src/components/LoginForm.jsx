@@ -1,8 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import Card from '@material-ui/core/Card';
-import CardText from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Container from '@material-ui/core/Container';
@@ -21,21 +19,21 @@ const LoginForm = ({
 
     <ButtonAppBar></ButtonAppBar>
     
-  <div style={{ height: 'calc(100vh - 60px)', backgroundImage: `url(/images/Background_Image.jpg)`, backgroundSize: 'cover', display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
+  <div style={{ height: 'calc(100vh - 60px)', backgroundImage: `url(/images/dU7Lxw.jpg)`, backgroundSize: 'cover', display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
     
   <Container>
     
-    <div style={{ backgroundColor: "#fafafa", width: "40%", margin: "auto",  borderRadius: "15", position: "relative" }}>
+    <div style={{ backgroundColor: "#fafafa", width: "400px", margin: "auto",  borderRadius: "25px", position: "relative" }}>
 
   
-  <form action="/videos" onSubmit={onSubmit} >
-  <div class="jumbotron" >
-        <h1 style={{ fontSize: "40px" }} class="display-4">Log Into Your Account!</h1>
+  <form action="/" onSubmit={onSubmit} >
+  <div className="jumbotron" >
+        <h2 class="display-4" style={{fontSize: "300%"}}>Log Into Your Account!</h2>
 
         {successMessage && <p className="success-message">{successMessage}</p>}
       {errors.summary && <p className="error-message">{errors.summary}</p>}
           
-            <TextField style={{ width: "100%", marginTop: "20px" }} label="Email"
+            <TextField style={{width: "100%"}} label="Email"
           name="email"
           error={errors.email}
           helperText={ errors.email || null }
@@ -43,8 +41,9 @@ const LoginForm = ({
           value={user.email}> </TextField>
           
 <br></br>
+<br></br>
           
-            <TextField style={{ width: "100%", marginTop: "20px", marginBottom: "20px" }} label="Password"
+            <TextField style={{width: "100%"}} label="Password"
           type="password"
           name="password"
           onChange={onChange}
@@ -54,8 +53,9 @@ const LoginForm = ({
 
         <hr class="my-4"></hr>
         <div className="button-line">
-        <Button style={{ background: "#2b4e7e", color: "white" }} type="submit" variant="contained" children="Log in" primary/>
+        <Button style={{ background: "#003C57", color: "white" }} type="submit" variant="contained" children="Log in" primary/>
       </div>
+<br></br>
 <br></br>
       <Typography >Don't have an account? <Link to={'/signup'}>Create one</Link>.</Typography>
       </div>
@@ -80,44 +80,3 @@ LoginForm.propTypes = {
 
 export default LoginForm;
 
-{/* <Container>
-    <div style={{ backgroundColor: "#fafafa", width: "40%", height: "40vh", margin: "auto", marginTop: "25%", borderRadius: "15"}}>
-    <form action="/" onSubmit={onSubmit}>
-
-      <h2 className="card-heading">Log into your account</h2>
-
-      {successMessage && <p className="success-message">{successMessage}</p>}
-      {errors.summary && <p className="error-message">{errors.summary}</p>}
-
-
-      <div className="field-line">
-        <TextField
-          label="Email"
-          name="email"
-          error={errors.email}
-          helperText={ errors.email || null }
-          onChange={onChange}
-          value={user.email}
-        />
-      </div>
-
-      <div className="field-line">
-        <TextField
-          label="Password"
-          type="password"
-          name="password"
-          onChange={onChange}
-          error={errors.password}
-          value={user.password}
-        />
-      </div>
-
-      <div className="button-line">
-        <Button type="submit" children="Log in" primary />
-      </div>
-
-      {/* <CardText style={{ backgroundColor: "#fafafa"}}>Don't have an account? <Link to={'/signup'}>Create one</Link>.</CardText> */}
-      
-  //   </form>
-  // </div>
-  // </Container> */}

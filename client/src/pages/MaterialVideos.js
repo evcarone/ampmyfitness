@@ -74,7 +74,7 @@ export default function MaterialVideo() {
 
 <Container style={{ marginTop: "50px" }} >
             {/* Yoga */}
-            <ExpansionPanel style={{background: "#a7b881"}}>
+            <ExpansionPanel style={{background: "#96a63d"}}>
                 <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
@@ -92,7 +92,7 @@ export default function MaterialVideo() {
             </ExpansionPanel>
 
             {/* Running */}
-            <ExpansionPanel style={{background: "#76badb"}}>
+            <ExpansionPanel style={{background: "#96a63d"}}>
                 <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel2a-content"
@@ -110,11 +110,11 @@ export default function MaterialVideo() {
             </ExpansionPanel>
 
             {/* High Intensity Interval Training */}
-            <ExpansionPanel style={{background: "#d86346"}}>
+            <ExpansionPanel style={{background: "#96a63d"}}>
                 <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel2a-content"
-                    id="panel2a-header"
+                    id="panel2a-header" 
                 >
                     <Typography style={{ margin: "10px", fontSize: "18px" }}  className={classes.heading}> <strong>High Intensity Interval Training&nbsp;&nbsp;</strong><TransferWithinAStationIcon style={{ fontSize: 25 }}/></Typography> 
                 </ExpansionPanelSummary>
@@ -128,7 +128,7 @@ export default function MaterialVideo() {
             </ExpansionPanel>
 
             {/* Cycling */}
-            <ExpansionPanel style={{background: "#d0c44c"}}>
+            <ExpansionPanel style={{background: "#96a63d"}}>
                 <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel2a-content"
@@ -146,7 +146,7 @@ export default function MaterialVideo() {
             </ExpansionPanel>
 
             {/* Pilates */}
-            <ExpansionPanel style={{ background: "#2b4e7e" }}>
+            <ExpansionPanel style={{ background: "#96a63d" }}>
                 <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel2a-content"
