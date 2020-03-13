@@ -7,7 +7,7 @@ import athleteQuotes from '../../utils/athleteQuotes/athleteQuotes';
 //import RandomQuoteAPI from './Home/'
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    maxWidth: 300,
   },
   media: {
     height: 140,
@@ -23,11 +23,11 @@ export default function RandomQuote() {
     <Card className={classes.root}>
       
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant="h5" component="h2" style={{ textAlign: "center" }}>
            Quote of the Day
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            <div>
+            <div style={{ textAlign: "center" }}>
           {athleteQuotes[Math.floor(Math.random()*(athleteQuotes.length-1))].quote}
           </div>
           </Typography>

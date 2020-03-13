@@ -23,10 +23,10 @@ export default function ButtonAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" style={{ background: "#2b4e7e"}}>
+      <AppBar position="static" style={{ background: "#003C57"}}>
         <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            Amp My Workout!
+          <Typography variant="h5" align="center" className={classes.title}>
+            Amp My Workout
           </Typography>
         </Toolbar>
       </AppBar>

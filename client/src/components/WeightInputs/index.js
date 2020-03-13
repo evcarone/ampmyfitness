@@ -45,7 +45,7 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: "#f5f5f5",
         width: "100%",
         position: 'relative',
-        maxHeight: 800,
+        maxHeight: 500,
     },
 }));
 
@@ -77,15 +77,15 @@ export default function FloatingActionButtonZoom() {
         setBmi(newBmi)
     };
     return (
-
-        <Container>
-            <div className={classes.root} >
-                <AppBar position="static" color="default" >
+<div style={{ textAlign: "center", width: "85%" }}>
+        <Container style={{ display: "inline-block" }}>
+            <div className={classes.root}>
+                <AppBar style={{ backgroundColor: "#003C57" }} position="static">
                     <Tabs
                         value={value}
                         onChange={handleChange}
-                        indicatorColor="primary"
-                        textColor="primary"
+                        indicatorColor="success"
+                        textColor="success"
                         variant="fullWidth"
                         aria-label="action tabs example"
                     >
@@ -93,29 +93,31 @@ export default function FloatingActionButtonZoom() {
                         <Tab label="View Charts" {...a11yProps(1)} />
                     </Tabs>
                 </AppBar>
-                <TabPanel value={value} index={0} dir={theme.direction}>
-                    <form>
+                <TabPanel style={{ backgroundColor: "#8f8f8f" }} value={value} index={0} dir={theme.direction}>
+                    <div style={{ textAlign: "center" }}>
+                    <form style={{ width: "100%", display: "inline-block" }}>
                         <div className="jumbotron" >
                             <h1 class="display-4" style={{ fontSize: "300%" }}>Input Weight!</h1>
 
-                            <TextField onChange={handleWeightChange} id="standard-basic" label="Weight in Pounds" style={{ width: "75%" }} />
+                            <TextField onChange={handleWeightChange} id="standard-basic" label="Weight in Pounds" style={{ width: "85%" }} />
 
                             <br></br>
                             <br></br>
 
-                            <TextField onChange={handleHeightChange} id="standard-basic" label="Height in Inches" style={{ width: "75%" }} />
+                            <TextField onChange={handleHeightChange} id="standard-basic" label="Height in Inches" style={{ width: "85%" }} />
 
 
                             <hr class="my-4"></hr>
-                            <div className="button-line">
-                                <Button style={{ background: "#2b4e7e", color: "white" }} type="submit" onClick={handleBMI} variant="contained" children="Submit" />
+                            <div className="button-line" style={{ marginBottom: "50px"}}>
+                                <Button style={{ background: "#003C57", color: "white" }} type="submit" onClick={handleBMI} variant="contained" children="Submit" />
                             </div>
                         </div>
                     </form>
+                    </div>
                     
                 </TabPanel>
 
-                <TabPanel value={value} index={1} dir={theme.direction}>
+                <TabPanel style={{ backgroundColor: "#8f8f8f" }} value={value} index={1} dir={theme.direction}>
                     <h1> BMI: {bmi} </h1>
         </TabPanel>
                 <TabPanel value={value} index={2} dir={theme.direction}>
@@ -125,5 +127,6 @@ export default function FloatingActionButtonZoom() {
             </div>
 
         </Container>
+        </div>
     );
 }

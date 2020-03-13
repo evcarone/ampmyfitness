@@ -18,14 +18,14 @@ const SignUpForm = ({
 
 <ButtonAppBar></ButtonAppBar>
 
-  <div style={{ height: 'calc(100vh - 60px)', backgroundImage: `url(/images/Background_Image.jpg)`, backgroundSize: 'cover', display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+  <div style={{ height: 'calc(100vh - 60px)', backgroundImage: `url(/images/dU7Lxw.jpg)`, backgroundSize: 'cover', display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
     
   <Container>
   
-    <div style={{ backgroundColor: "#fafafa", width: "40%",  margin: "auto", borderRadius: "15", postion: "relative" }}>
+    <div style={{ backgroundColor: "#fafafa", width: "400px",  margin: "auto", borderRadius: "25px", postion: "relative" }}>
   <form action="/" onSubmit={onSubmit} >
   <div className="jumbotron">
-        <h2 class="display-4">Sign Up!</h2>
+        <h2 class="display-4" style={{fontSize: "300%"}}>Sign Up!</h2>
 
         <br></br>
 
@@ -63,7 +63,7 @@ const SignUpForm = ({
 
         <hr class="my-4"></hr>
         <div className="button-line">
-        <Button style={{ background: "#2b4e7e", color: "white" }} type="submit" variant="contained" children="Log in" primary> Create Account</Button>
+        <Button style={{ background: "#003C57", color: "white" }} type="submit" variant="contained" children="Log in" primary> Create Account</Button>
       </div>
 <br></br>
 <br></br>
@@ -85,53 +85,3 @@ SignUpForm.propTypes = {
 };
 
 export default SignUpForm;
-
-{/* <Container>
-  <Card className="container">
-    <form action="/" onSubmit={onSubmit}>
-      <h2 className="card-heading">Sign Up</h2>
-
-      {errors.summary && <p className="error-message">{errors.summary}</p>}
-
-      <div className="field-line">
-        Name: <TextField
-        placeholder="Name"
-          floatinglabeltext="Name"
-          name="name"
-          errortext={errors.name}
-          onChange={onChange}
-          value={user.name}
-        />
-      </div>
-
-      <div className="field-line">
-        Email: <TextField
-        placeholder="Email"
-          floatinglabeltext="Email"
-          name="email"
-          errortext={errors.email}
-          onChange={onChange}
-          value={user.email}
-        />
-      </div>
-
-      <div className="field-line">
-        Password: <TextField
-        placeholder="Password"
-          floatinglabeltext="Password"
-          type="password"
-          name="password"
-          onChange={onChange}
-          errortext={errors.password}
-          value={user.password}
-        />
-      </div>
-
-      <div className="button-line">
-        <Button type="submit" label="Create New Account" primary />
-      </div>
-
-      <CardText>Already have an account? <Link to={'/login'}>Log in</Link></CardText>
-    </form>
-  </Card>
-  </Container> */}

@@ -6,9 +6,11 @@ import Typography from '@material-ui/core/Typography';
 import { Link } from "react-router-dom";
 import Button from '@material-ui/core/Button';
 import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle'
 import API from '../../utils/API';
 import Auth from '../../utils/Auth';
+import TemporaryDrawer from '../TemporaryDrawer/TemporaryDrawer';
+import IconButton from '@material-ui/core/IconButton'
 
 class LoggedInButtonAppBar extends React.Component {
   state = {
@@ -32,17 +34,16 @@ class LoggedInButtonAppBar extends React.Component {
 
   render() {
     return (
-      <div style={{flexGrow: 1 }}>
-        <AppBar position="static" style={{ background: "#2b4e7e" }}>
+      <div style={{ flexGrow: 1 }}>
+        <AppBar position="static" style={{ background: "#003C57" }}>
           <Toolbar>
-            <Button style={{ color: "white" }}><AccountCircleIcon fontSize="large" />&nbsp;&nbsp;{this.state.user.name}</Button>
-            <Typography variant="h6" style={{ textAlign: 'center', flexGrow: 1 }}>
-              Amp My Workout&nbsp;&nbsp;<FitnessCenterIcon />
+            <IconButton edge="start" color="inherit" aria-label="menu">
+              <TemporaryDrawer />
+            </IconButton>
+            <Typography variant="h5" align="center" style={{ flexGrow: 1, marginLeft: "25px" }}>
+              Amp My Workout
             </Typography>
-            <Button><Link style={{color: "white", }} to={"/home"}>Home</Link></Button>
-            <Button><Link style={{ color: "white", }} to={"/workouts"}>Workouts</Link></Button>
-            <Button><Link style={{ color: "white", }} to={"/videos"} color="inherit">Videos</Link></Button>
-            <Button><Link style={{ color: "white", }} to="/logout">Log out</Link></Button>
+            <Button style={{ color: "white" }}><AccountCircleIcon fontSize="large" />&nbsp;&nbsp;{this.state.user.name}</Button>
           </Toolbar>
         </AppBar>
       </div>)
@@ -50,4 +51,5 @@ class LoggedInButtonAppBar extends React.Component {
 }
 
 export default LoggedInButtonAppBar;
+
 

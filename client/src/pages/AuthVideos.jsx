@@ -29,9 +29,9 @@ class AuthVideos extends React.Component {
    */
   render() {
     return (
-      <div>
+      <div style={{ backgroundColor: "black" }}>
                 <LoggedInButtonAppBar></LoggedInButtonAppBar>
-                <div style={{ height: 'calc(100vh - 64px)', backgroundImage: `url(/images/Background_Image.jpg)`, backgroundSize: 'cover', }}>
+                <div style={{ height: 'calc(100vh - 64px)', backgroundImage: `url(/images/dU7Lxw.jpg)`, backgroundAttachment: "fixed", backgroundSize: 'cover', backgroundRepeat: "repeat-y" }}>
                     <br></br>
                     
                     <MaterialVideos></MaterialVideos>

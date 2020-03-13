@@ -19,16 +19,16 @@ const LoginForm = ({
 
     <ButtonAppBar></ButtonAppBar>
     
-  <div style={{ height: 'calc(100vh - 60px)', backgroundImage: `url(/images/Background_Image.jpg)`, backgroundSize: 'cover', display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
+  <div style={{ height: 'calc(100vh - 60px)', backgroundImage: `url(/images/dU7Lxw.jpg)`, backgroundSize: 'cover', display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
     
   <Container>
     
-    <div style={{ backgroundColor: "#fafafa", width: "40%", margin: "auto",  borderRadius: "15", position: "relative" }}>
+    <div style={{ backgroundColor: "#fafafa", width: "400px", margin: "auto",  borderRadius: "25px", position: "relative" }}>
 
   
   <form action="/" onSubmit={onSubmit} >
   <div className="jumbotron" >
-        <h1 class="display-4" style={{fontSize: "300%"}}>Log Into Your Account!</h1>
+        <h2 class="display-4" style={{fontSize: "300%"}}>Log Into Your Account!</h2>
 
         {successMessage && <p className="success-message">{successMessage}</p>}
       {errors.summary && <p className="error-message">{errors.summary}</p>}
@@ -41,6 +41,7 @@ const LoginForm = ({
           value={user.email}> </TextField>
           
 <br></br>
+<br></br>
           
             <TextField style={{width: "100%"}} label="Password"
           type="password"
@@ -52,8 +53,9 @@ const LoginForm = ({
 
         <hr class="my-4"></hr>
         <div className="button-line">
-        <Button style={{ background: "#2b4e7e", color: "white" }} type="submit" variant="contained" children="Log in" primary/>
+        <Button style={{ background: "#003C57", color: "white" }} type="submit" variant="contained" children="Log in" primary/>
       </div>
+<br></br>
 <br></br>
       <Typography >Don't have an account? <Link to={'/signup'}>Create one</Link>.</Typography>
       </div>
