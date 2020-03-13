@@ -45,7 +45,7 @@ class App extends Component {
           <PrivateRoute path="/videos" component={AuthVideos} />
           <PrivateRoute path="/workouts" component={AuthWorkouts} />
           <LoggedOutRoute path="/login" component={LoginPage} toggleAuthenticateStatus={this.toggleAuthenticateStatus} />
-          <LoggedOutRoute path="/signup" component={SignUpPage} />
+          <PropsRoute path="/signup" component={SignUpPage} />
           <Route path="/logout" component={LogoutFunction} />
 
         </div>
