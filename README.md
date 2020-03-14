@@ -49,6 +49,14 @@ Zach Nylen (GitHub: znylen88) - Custom Exercise API, ReadME, Styling, App Compon
 
 https://hidden-caverns-01936.herokuapp.com/
 
-## App Signup:
+## App Login:
 
  ![App Function](https://github.com/evcarone/ampmyfitness/blob/master/demo-images/Screen%20Shot%202020-03-13%20at%204.57.29%20PM.png)
+ 
+ ## Exercises Page:
+ 
+ ![App Function](https://github.com/evcarone/ampmyfitness/blob/master/demo-images/Screen%20Shot%202020-03-13%20at%204.58.44%20PM.png)
+ 
+  ## Videos Page:
+ 
+ ![App Function](https://github.com/evcarone/ampmyfitness/blob/master/demo-images/Screen%20Shot%202020-03-13%20at%204.59.04%20PM.png)
