@@ -22,3 +22,27 @@ AmpMyFitness is a fitness app that provides the user with workout classes via Yo
 4. If you click on the icon in the upper left corner, this will pull down the drawer where the app links reside.
 
 5. If you click on the "Exercises" tab you will be routed to the exercises page. Here, the user can select different body parts and be given a selection of exercises and how to complete them properly. 
+
+## Credits
+
+Nicholas Serra (GitHub: nserra310) - HTML/CSS/Google Materialize/API-Routes/Javascript/MySQL/Tech Diagram
+
+Holly Blome (GitHub: HBlome) - HTML/PowerPoint
+
+Rod Nicolau (GitHub: RodNick10) - MySQL/Models
+
+Zach Nylen (GitHub: znylen88) - API's/Javascript/JQuery/HTML/CSS/MYSQL/Heroku/API-HTML Routes/Passport
+
+## 3rd Party APIs
+
+1. OpenWeatherAPI
+
+2. HikingProjectAPI (REI)
+
+## Deployed App
+
+https://hike-sd.herokuapp.com/
+
+## App Signup:
+
+ ![App Function](https://github.com/znylen88/Hike-SD/blob/master/public/GitHub-Images/Signup-Page.png)
