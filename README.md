@@ -2,9 +2,9 @@
 
 AmpMyFitness is a fitness app that provides the user with workout classes via YouTube, exercise instructions categorized by body part, and input fields for determining BMI and target heart rates.
 
-## App Homepage:
+## App Login Page:
 
-![App Function](https://github.com/evcarone/ampmyfitness/blob/master/demo-images/Screen%20Shot%202020-03-13%20at%204.58.06%20PM.png)
+![App Function](https://github.com/evcarone/ampmyfitness/blob/master/demo-images/Screen%20Shot%202020-03-13%20at%204.57.29%20PM.png)
 
 ## Application Requirements
 
@@ -49,9 +49,9 @@ Zach Nylen (GitHub: znylen88) - Custom Exercise API, ReadME, Styling, App Compon
 
 https://hidden-caverns-01936.herokuapp.com/
 
-## App Login:
+## App Home Page:
 
- ![App Function](https://github.com/evcarone/ampmyfitness/blob/master/demo-images/Screen%20Shot%202020-03-13%20at%204.57.29%20PM.png)
+ ![App Function](https://github.com/evcarone/ampmyfitness/blob/master/demo-images/Screen%20Shot%202020-03-13%20at%204.58.06%20PM.png)
  
  ## Exercises Page:
  
@@ -60,3 +60,4 @@ https://hidden-caverns-01936.herokuapp.com/
   ## Videos Page:
  
  ![App Function](https://github.com/evcarone/ampmyfitness/blob/master/demo-images/Screen%20Shot%202020-03-13%20at%204.59.04%20PM.png)
+ 
