@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -55,9 +56,15 @@ export default function FloatingActionButtonZoom() {
     const [value, setValue] = useState(0);
     const [weight, setWeight] = useState("");
     const [height, setHeight] = useState("");
+    const [age, setAge] = useState("");
     const [bmi, setBmi] = useState("");
+    const [maxHR, setmaxHR] = useState("");
 
-    const handleChange = (event, newValue) => {
+    const handleChangeBMI = (event, newValue) => {
+        setValue(newValue);
+    };
+
+    const handleChangeMaxHR = (event, newValue) => {
         setValue(newValue);
     };
 
@@ -65,6 +72,11 @@ export default function FloatingActionButtonZoom() {
         setWeight(e.target.value)
         console.log(weight)
     };
+
+    const handleAgeChange = (e) => {
+        setAge(e.target.value)
+        console.log(age)
+    }
 
     const handleHeightChange = (e) => {
         setHeight(e.target.value)
@@ -76,6 +88,13 @@ export default function FloatingActionButtonZoom() {
         let newBmi = parseInt(703*weight/(height*height))
         setBmi(newBmi)
     };
+
+    const handleMaxHR = (event) => {
+        event.preventDefault()
+        let newMaxHR = parseInt(220 - age)
+        setmaxHR(newMaxHR)
+    };
+
     return (
 <div style={{ textAlign: "center", width: "85%" }}>
         <Container style={{ display: "inline-block" }}>
@@ -83,19 +102,19 @@ export default function FloatingActionButtonZoom() {
                 <AppBar style={{ backgroundColor: "#003C57" }} position="static">
                     <Tabs
                         value={value}
-                        onChange={handleChange}
+                        onChange={handleChangeBMI, handleChangeMaxHR}
                         indicatorColor="success"
                         textColor="success"
                         variant="fullWidth"
                         aria-label="action tabs example"
                     >
-                        <Tab label="Input Stats" {...a11yProps(0)} />
-                        <Tab label="View Charts" {...a11yProps(1)} />
+                        <Tab label="BMI" {...a11yProps(0)} />
+                        <Tab label="Max Heart Rate" {...a11yProps(1)} />
                     </Tabs>
                 </AppBar>
                 <TabPanel style={{ backgroundColor: "#8f8f8f" }} value={value} index={0} dir={theme.direction}>
                     <div style={{ textAlign: "center" }}>
-                    <form style={{ width: "100%", display: "inline-block" }}>
+                    <form style={{ width: "100%", display: "inline-block", marginBottom: "-30px" }}>
                         <div className="jumbotron" >
                             <h1 class="display-4" style={{ fontSize: "300%" }}>Input Weight!</h1>
 
@@ -111,6 +130,7 @@ export default function FloatingActionButtonZoom() {
                             <div className="button-line" style={{ marginBottom: "50px"}}>
                                 <Button style={{ background: "#003C57", color: "white" }} type="submit" onClick={handleBMI} variant="contained" children="Submit" />
                             </div>
+                            <h1> BMI: {bmi} </h1>
                         </div>
                     </form>
                     </div>
@@ -118,7 +138,21 @@ export default function FloatingActionButtonZoom() {
                 </TabPanel>
 
                 <TabPanel style={{ backgroundColor: "#8f8f8f" }} value={value} index={1} dir={theme.direction}>
-                    <h1> BMI: {bmi} </h1>
+                <div style={{ textAlign: "center" }}>
+                    <form style={{ width: "100%", display: "inline-block" }}>
+                        <div className="jumbotron" >
+                            <h1 class="display-4" style={{ fontSize: "300%" }}>Input Age!</h1>
+
+                            <TextField onChange={handleAgeChange} id="standard-basic" label="Age" style={{ width: "85%" }} />
+
+                            <hr class="my-4"></hr>
+                            <div className="button-line" style={{ marginBottom: "50px"}}>
+                                <Button style={{ background: "#003C57", color: "white" }} type="submit" onClick={handleMaxHR} variant="contained" children="Submit" />
+                            </div>
+                            <h3><FavoriteBorderIcon style={{ fontSize: "36px" }}/>: {maxHR} </h3>
+                        </div>
+                    </form>
+                    </div>
         </TabPanel>
                 <TabPanel value={value} index={2} dir={theme.direction}>
                     Item Three

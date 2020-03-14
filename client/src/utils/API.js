@@ -9,23 +9,23 @@ export default {
      axios.get('/api/dashboard', {headers: {Authorization: `bearer ${token}`}}),
 
   getYogaPlaylists: function() {
-    return axios.get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${yogaPlaylistId}&key=${APIKey2}`);
+    return axios.get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${yogaPlaylistId}&key=${APIKey3}`);
   },
 
   getRunningPlaylists: function() {
-    return axios.get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${runningPlaylistId}&key=${APIKey2}`);
+    return axios.get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${runningPlaylistId}&key=${APIKey3}`);
   },
 
   getHIITPlaylists: function() {
-    return axios.get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${HIITPlaylistId}&key=${APIKey2}`);
+    return axios.get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${HIITPlaylistId}&key=${APIKey3}`);
   },
   
   getCyclingPlaylists: function() {
-    return axios.get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${cyclingPlaylistId}&key=${APIKey2}`);
+    return axios.get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${cyclingPlaylistId}&key=${APIKey3}`);
   },
 
   getPilatesPlaylists: function() {
-    return axios.get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${pilatesPlaylistId}&key=${APIKey2}`);
+    return axios.get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${pilatesPlaylistId}&key=${APIKey3}`);
   }
 }
 
@@ -37,4 +37,5 @@ const pilatesPlaylistId = "PL5TOTBNdO-gZsmATiegySiHVv8eeuBtLS"
 
 
 // const APIKey1 = "AIzaSyDYrjg7hzSQAr0gK0-hxVillcmwo-yx9Tc"
-const APIKey2 = "AIzaSyB3UC2CWVl2hIOphaAWz0ROnUi_zMw480o"
+//const APIKey2 = "AIzaSyDYrjg7hzSQAr0gK0-hxVillcmwo-yx9Tc"
+const APIKey3 = "AIzaSyBWIcAwKvj5Ka0HJVlbvF4ImR7MmvmfUqY"
