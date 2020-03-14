@@ -5,3 +5,9 @@ AmpMyFitness is a fitness app that provides the user with workout classes via Yo
 ## App Homepage:
 
 ![App Function](https://github.com/evcarone/ampmyfitness/blob/master/demo-images/Screen%20Shot%202020-03-13%20at%204.58.06%20PM.png)
+
+## Application Requirements
+
+* Must use MERN stack
+
+* Must use a CSS framework _other than_ Bootstrap
