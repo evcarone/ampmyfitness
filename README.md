@@ -21,28 +21,34 @@ AmpMyFitness is a fitness app that provides the user with workout classes via Yo
 
 4. If you click on the icon in the upper left corner, this will pull down the drawer where the app links reside.
 
-5. If you click on the "Exercises" tab you will be routed to the exercises page. Here, the user can select different body parts and be given a selection of exercises and how to complete them properly. 
+5. If you click on the "Exercises" tab you will be routed to the exercises page. Here, the user can select different body parts and be given a selection of exercises and how to complete them properly.
+
+6. If the "Videos" tab is selected you will be routed to the videos page which provides the user with 5 custom YouTube playlists associated with different workout categories.
 
 ## Credits
 
-Nicholas Serra (GitHub: nserra310) - HTML/CSS/Google Materialize/API-Routes/Javascript/MySQL/Tech Diagram
+Nicholas Serra (GitHub: nserra310) - Custom Random Quotes API, Tech Diagram, Drawer Component, Styling
 
-Holly Blome (GitHub: HBlome) - HTML/PowerPoint
+Evelyn Carone (GitHub: evcarone) - Passport JS, Mongo DB, Powerpoint, JSX Pages 
 
-Rod Nicolau (GitHub: RodNick10) - MySQL/Models
+Sina Farheidar-Smith (GitHub: sinafarheidar) - YouTube API, Input Javascript Calculations, App Components, Styling, JSX Pages 
 
-Zach Nylen (GitHub: znylen88) - API's/Javascript/JQuery/HTML/CSS/MYSQL/Heroku/API-HTML Routes/Passport
+Zach Nylen (GitHub: znylen88) - Custom Exercise API, ReadME, Styling, App Components, Exercises JSX Page
 
 ## 3rd Party APIs
 
-1. OpenWeatherAPI
+1. YouTube API
 
-2. HikingProjectAPI (REI)
+## Custom APIs
+
+1. Exercises API (Zach Nylen)
+
+2. Random Quote API (Nicholas Serra)
 
 ## Deployed App
 
-https://hike-sd.herokuapp.com/
+https://hidden-caverns-01936.herokuapp.com/
 
 ## App Signup:
 
- ![App Function](https://github.com/znylen88/Hike-SD/blob/master/public/GitHub-Images/Signup-Page.png)
+ ![App Function](https://github.com/evcarone/ampmyfitness/blob/master/demo-images/Screen%20Shot%202020-03-13%20at%204.57.29%20PM.png)
