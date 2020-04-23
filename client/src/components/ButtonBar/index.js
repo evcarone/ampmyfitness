@@ -26,7 +26,7 @@ export default function ButtonAppBar() {
       <AppBar position="static" style={{ background: "#003C57"}}>
         <Toolbar>
           <Typography variant="h5" align="center" className={classes.title}>
-            Amp My Workout
+            Amp My Fitness
           </Typography>
         </Toolbar>
       </AppBar>

@@ -10,7 +10,8 @@ import SignUpPage from './pages/SignUpPage.jsx';
 import AuthVideos from './pages/AuthVideos';
 import AuthWorkouts from './pages/AuthWorkouts';
 import Auth from './utils/Auth';
-import AuthHome from "./pages/AuthHome"
+import AuthHome from "./pages/AuthHome";
+import Landing from "./pages/LandingPage.jsx";
 // remove tap delay, essential for MaterialUI to work properly
 // injectTapEventPlugin();
 
@@ -40,11 +41,11 @@ class App extends Component {
 
         <div>
 
-          <PropsRoute exact path="/" component={LoginPage} toggleAuthenticateStatus={this.toggleAuthenticateStatus} />
+          <Route exact path="/" component={Landing} />
+          <PropsRoute path="/login" component={LoginPage} toggleAuthenticateStatus={this.toggleAuthenticateStatus} />
           <PrivateRoute path="/home" component={AuthHome} />
           <PrivateRoute path="/videos" component={AuthVideos} />
           <PrivateRoute path="/workouts" component={AuthWorkouts} />
-          <LoggedOutRoute path="/login" component={LoginPage} toggleAuthenticateStatus={this.toggleAuthenticateStatus} />
           <PropsRoute path="/signup" component={SignUpPage} />
           <Route path="/logout" component={LogoutFunction} />
 

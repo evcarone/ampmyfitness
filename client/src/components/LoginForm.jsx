@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Container from '@material-ui/core/Container';
 import { Typography } from '@material-ui/core';
-import ButtonAppBar from "../components/ButtonBar/index"
+import AccountCircleIcon from '@material-ui/icons/AccountCircle'
 
 const LoginForm = ({
   onSubmit,
@@ -15,60 +15,56 @@ const LoginForm = ({
   successMessage,
   toggleAuthenticateStatus
 }) => (
-  <Fragment>
+    <Fragment>
 
-    <ButtonAppBar></ButtonAppBar>
-    
-  <div style={{ height: 'calc(100vh - 60px)', backgroundImage: `url(/images/dU7Lxw.jpg)`, backgroundSize: 'cover', display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
-    
-  <Container>
-    
-    <div style={{ backgroundColor: "#fafafa", width: "400px", margin: "auto",  borderRadius: "25px", position: "relative" }}>
+      <div style={{ height: 'calc(100vh)', backgroundImage: `url(/images/dU7Lxw.jpg)`, backgroundSize: 'cover', display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", backgroundRepeat: "none" }}>
 
-  
-  <form action="/" onSubmit={onSubmit} >
-  <div className="jumbotron" >
-        <h2 class="display-4" style={{fontSize: "300%"}}>Log Into Your Account!</h2>
+        <Container style={{ opacity: ".85", textAlign: "center" }}>
 
-        {successMessage && <p className="success-message">{successMessage}</p>}
-      {errors.summary && <p className="error-message">{errors.summary}</p>}
-          
-            <TextField style={{width: "100%"}} label="Email"
-          name="email"
-          error={errors.email}
-          helperText={ errors.email || null }
-          onChange={onChange}
-          value={user.email}> </TextField>
-          
-<br></br>
-<br></br>
-          
-            <TextField style={{width: "100%"}} label="Password"
-          type="password"
-          name="password"
-          onChange={onChange}
-          error={errors.password}
-          value={user.password}> </TextField>
-          
+          <div style={{ backgroundColor: "#fafafa", width: "325px", margin: "auto", borderRadius: "5px", position: "relative", padding: "30px" }}>
 
-        <hr class="my-4"></hr>
-        <div className="button-line">
-        <Button style={{ background: "#003C57", color: "white" }} type="submit" variant="contained" children="Log in" primary/>
-      </div>
-<br></br>
-<br></br>
-      <Typography >Don't have an account? <Link to={'/signup'}>Create one</Link>.</Typography>
-      </div>
-      </form>
 
-      </div>
-      </Container>
-      
+            <form action="/" onSubmit={onSubmit} >
+              <h6 class="display-4" style={{ fontSize: "250%" }}>Welcome</h6>
+              <AccountCircleIcon style={{ fontSize: "60px", margin: "10px" }}/>
+
+              <br></br>
+
+              {successMessage && <p className="success-message">{successMessage}</p>}
+              {errors.summary && <p className="error-message">{errors.summary}</p>}
+
+              <TextField style={{ width: "100%" }} placeholder="Email"
+                name="email"
+                error={errors.email}
+                helperText={errors.email || null}
+                onChange={onChange}
+                value={user.email}> </TextField>
+
+              <br></br>
+              <br></br>
+
+              <TextField style={{ width: "100%" }} placeholder="Password"
+                type="password"
+                name="password"
+                onChange={onChange}
+                error={errors.password}
+                value={user.password}> </TextField>
+              <div className="button-line">
+              <br></br>
+                <Button style={{ margin: "10px" }} color="secondary" type="submit" variant="contained" children="Log in" primary />
+              </div>
+              <br></br>
+              <Typography >Don't have an account? <Link to={'/signup'}>Create one</Link>.</Typography>
+            </form>
+
+          </div>
+        </Container>
+
       </div>
 
-      </Fragment>
-      
-);
+    </Fragment>
+
+  );
 
 LoginForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
