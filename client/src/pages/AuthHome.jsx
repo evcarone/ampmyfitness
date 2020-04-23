@@ -32,9 +32,9 @@ class AuthVideos extends React.Component {
         return (
             <div>
                 <LoggedInButtonAppBar></LoggedInButtonAppBar>
-                <div style={{ height: 'calc(100vh - 64px)', backgroundImage: `url(/images/dU7Lxw.jpg)`, backgroundSize: 'cover' }}>
+                <div style={{ height: 'calc(100vh)', backgroundImage: `url(/images/Enter.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                     <br></br>
-                    <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '2%' }}>
+                    <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '2%', opacity: ".8" }}>
                         <RandomQuotes></RandomQuotes>
                     </div>
 

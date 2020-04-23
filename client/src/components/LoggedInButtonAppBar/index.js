@@ -35,7 +35,7 @@ class LoggedInButtonAppBar extends React.Component {
   render() {
     return (
       <div style={{ flexGrow: 1 }}>
-        <AppBar position="static" style={{ background: "#003C57" }}>
+        <AppBar position="static" color="secondary">
           <Toolbar>
             <IconButton edge="start" color="inherit" aria-label="menu">
               <TemporaryDrawer />

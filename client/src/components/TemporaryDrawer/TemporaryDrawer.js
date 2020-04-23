@@ -44,26 +44,26 @@ export default function TemporaryDrawer() {
         >
             <List>
                 <ListItem button>
-                    <ListItemIcon><Home style={{ color: "#003C57" }}/></ListItemIcon>
-                    <Link style={{ color: "black" }} to={"/home"}>
+                    <ListItemIcon><Home color="secondary"/></ListItemIcon>
+                    <Link style={{ color: "black", textDecoration: "none" }} to={"/home"}>
                         <ListItemText primary="Home" />
                     </Link>
                 </ListItem>
                 <ListItem button>
-                    <ListItemIcon><FitnessCenter style={{ color: "#c27146" }}/></ListItemIcon>
-                    <Link style={{ color: "black" }} to={"/workouts"}>
+                    <ListItemIcon><FitnessCenter color="secondary"/></ListItemIcon>
+                    <Link style={{ color: "black", textDecoration: "none" }} to={"/workouts"}>
                         <ListItemText primary="Exercises" />
                     </Link>
                 </ListItem> 
                 <ListItem button>
-                    <ListItemIcon><Videocam style={{ color: "#96a63d" }}/></ListItemIcon>
-                    <Link style={{ color: "black" }} to={"/videos"}>
+                    <ListItemIcon><Videocam color="secondary"/></ListItemIcon>
+                    <Link style={{ color: "black", textDecoration: "none" }} to={"/videos"}>
                         <ListItemText primary="Videos" />
                     </Link>
                 </ListItem>
                 <ListItem button>
-                    <ListItemIcon><ExitToApp /></ListItemIcon>
-                    <Link style={{ color: "black" }} to={"/logout"}>
+                    <ListItemIcon><ExitToApp color="secondary" /></ListItemIcon>
+                    <Link style={{ color: "black", textDecoration: "none" }} to={"/logout"}>
                         <ListItemText primary="Log Out" />
                     </Link>
                 </ListItem>

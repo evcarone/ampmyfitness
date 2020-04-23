@@ -44,9 +44,8 @@ function a11yProps(index) {
 const useStyles = makeStyles(theme => ({
     root: {
         backgroundColor: "#f5f5f5",
-        width: "100%",
+        width: "auto",
         position: 'relative',
-        maxHeight: 500,
     },
 }));
 
@@ -96,10 +95,10 @@ export default function FloatingActionButtonZoom() {
     };
 
     return (
-<div style={{ textAlign: "center", width: "85%" }}>
-        <Container style={{ display: "inline-block" }}>
+<div style={{ textAlign: "center", width: "75%", height: "100px" }}>
+        <Container style={{ display: "inline-block", opacity: ".8" }}>
             <div className={classes.root}>
-                <AppBar style={{ backgroundColor: "#003C57" }} position="static">
+                <AppBar position="static" style={{ backgroundColor: "#3A3D40" }}>
                     <Tabs
                         value={value}
                         onChange={handleChangeBMI, handleChangeMaxHR}
@@ -115,8 +114,7 @@ export default function FloatingActionButtonZoom() {
                 <TabPanel style={{ backgroundColor: "#8f8f8f" }} value={value} index={0} dir={theme.direction}>
                     <div style={{ textAlign: "center" }}>
                     <form style={{ width: "100%", display: "inline-block", marginBottom: "-30px" }}>
-                        <div className="jumbotron" >
-                            <h1 class="display-4" style={{ fontSize: "300%" }}>Input Weight!</h1>
+                            <h1 class="display-4" style={{ fontSize: "300%" }}>Input Weight</h1>
 
                             <TextField onChange={handleWeightChange} id="standard-basic" label="Weight in Pounds" style={{ width: "85%" }} />
 
@@ -128,10 +126,10 @@ export default function FloatingActionButtonZoom() {
 
                             <hr class="my-4"></hr>
                             <div className="button-line" style={{ marginBottom: "50px"}}>
-                                <Button style={{ background: "#003C57", color: "white" }} type="submit" onClick={handleBMI} variant="contained" children="Submit" />
+                                <Button color="secondary" type="submit" onClick={handleBMI} variant="contained" children="Submit" />
                             </div>
                             <h1> BMI: {bmi} </h1>
-                        </div>
+                        
                     </form>
                     </div>
                     
@@ -140,26 +138,19 @@ export default function FloatingActionButtonZoom() {
                 <TabPanel style={{ backgroundColor: "#8f8f8f" }} value={value} index={1} dir={theme.direction}>
                 <div style={{ textAlign: "center" }}>
                     <form style={{ width: "100%", display: "inline-block" }}>
-                        <div className="jumbotron" >
-                            <h1 class="display-4" style={{ fontSize: "300%" }}>Input Age!</h1>
+                            <h1 class="display-4" style={{ fontSize: "300%" }}>Input Age</h1>
 
                             <TextField onChange={handleAgeChange} id="standard-basic" label="Age" style={{ width: "85%" }} />
 
                             <hr class="my-4"></hr>
                             <div className="button-line" style={{ marginBottom: "50px"}}>
-                                <Button style={{ background: "#003C57", color: "white" }} type="submit" onClick={handleMaxHR} variant="contained" children="Submit" />
+                                <Button color="secondary" type="submit" onClick={handleMaxHR} variant="contained" children="Submit" />
                             </div>
                             <h3><FavoriteBorderIcon style={{ fontSize: "36px" }}/>: {maxHR} </h3>
-                        </div>
                     </form>
                     </div>
         </TabPanel>
-                <TabPanel value={value} index={2} dir={theme.direction}>
-                    Item Three
-        </TabPanel>
-
             </div>
-
         </Container>
         </div>
     );

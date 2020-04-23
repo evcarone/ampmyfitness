@@ -72,9 +72,9 @@ export default function MaterialVideo() {
     return (
         <div className={classes.root} >
 
-<Container style={{ marginTop: "50px" }} >
+<Container style={{ marginTop: "50px", opacity: ".9" }} >
             {/* Yoga */}
-            <ExpansionPanel style={{background: "#96a63d"}}>
+            <ExpansionPanel>
                 <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
@@ -92,7 +92,7 @@ export default function MaterialVideo() {
             </ExpansionPanel>
 
             {/* Running */}
-            <ExpansionPanel style={{background: "#96a63d"}}>
+            <ExpansionPanel>
                 <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel2a-content"
@@ -110,7 +110,7 @@ export default function MaterialVideo() {
             </ExpansionPanel>
 
             {/* High Intensity Interval Training */}
-            <ExpansionPanel style={{background: "#96a63d"}}>
+            <ExpansionPanel>
                 <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel2a-content"
@@ -128,7 +128,7 @@ export default function MaterialVideo() {
             </ExpansionPanel>
 
             {/* Cycling */}
-            <ExpansionPanel style={{background: "#96a63d"}}>
+            <ExpansionPanel>
                 <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel2a-content"
@@ -146,7 +146,7 @@ export default function MaterialVideo() {
             </ExpansionPanel>
 
             {/* Pilates */}
-            <ExpansionPanel style={{ background: "#96a63d" }}>
+            <ExpansionPanel>
                 <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel2a-content"

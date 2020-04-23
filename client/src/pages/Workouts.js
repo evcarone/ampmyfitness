@@ -45,10 +45,10 @@ export default function Workouts() {
     return (
         <div className={classes.root} >
 
-            <Container style={{ marginTop: "50px" }}>
+            <Container style={{ marginTop: "50px", opacity: ".9" }}>
 
                 {/* Arms */}
-                <ExpansionPanel style={{background: "#c27146", color: "white" }}>
+                <ExpansionPanel>
 
                     <ExpansionPanelSummary
                         expandIcon={<ExpandMoreIcon />}
@@ -71,7 +71,7 @@ export default function Workouts() {
                 </ExpansionPanel>
 
                 {/* Back */}
-                <ExpansionPanel style={{background: "#c27146", color: "white"}}>
+                <ExpansionPanel>
 
                     <ExpansionPanelSummary
                         expandIcon={<ExpandMoreIcon />}
@@ -94,7 +94,7 @@ export default function Workouts() {
                 </ExpansionPanel>
 
                 {/* Abs */}
-                <ExpansionPanel style={{background: "#c27146", color: "white" }}>
+                <ExpansionPanel>
 
                     <ExpansionPanelSummary
                         expandIcon={<ExpandMoreIcon />}
@@ -117,7 +117,7 @@ export default function Workouts() {
                 </ExpansionPanel>
 
                 {/* Chest */}
-                <ExpansionPanel style={{background: "#c27146", color: "white"}}>
+                <ExpansionPanel>
 
                     <ExpansionPanelSummary
                         expandIcon={<ExpandMoreIcon />}
@@ -139,7 +139,7 @@ export default function Workouts() {
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
                 {/* Legs */}
-                <ExpansionPanel style={{background: "#c27146", color: "white" }}>
+                <ExpansionPanel>
 
                     <ExpansionPanelSummary
                         expandIcon={<ExpandMoreIcon />}
@@ -161,7 +161,7 @@ export default function Workouts() {
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
                 {/* Legs */}
-                <ExpansionPanel style={{background: "#c27146", color: "white"}}>
+                <ExpansionPanel>
 
                     <ExpansionPanelSummary
                         expandIcon={<ExpandMoreIcon />}

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Auth from '../utils/Auth';
 import LoginForm from '../components/LoginForm.jsx';
 import API from '../utils/API';
