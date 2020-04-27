@@ -8,7 +8,7 @@ import LoginPage from './pages/LoginPage.jsx';
 import LogoutFunction from './pages/LogoutFunction.jsx';
 import SignUpPage from './pages/SignUpPage.jsx';
 import AuthVideos from './pages/AuthVideos';
-import AuthWorkouts from './pages/AuthWorkouts';
+import AuthExercises from './pages/AuthExercises';
 import Auth from './utils/Auth';
 import AuthHome from "./pages/AuthHome";
 import Landing from "./pages/LandingPage.jsx";
@@ -45,7 +45,7 @@ class App extends Component {
           <PropsRoute path="/login" component={LoginPage} toggleAuthenticateStatus={this.toggleAuthenticateStatus} />
           <PrivateRoute path="/home" component={AuthHome} />
           <PrivateRoute path="/videos" component={AuthVideos} />
-          <PrivateRoute path="/workouts" component={AuthWorkouts} />
+          <PrivateRoute path="/exercises" component={AuthExercises} />
           <PropsRoute path="/signup" component={SignUpPage} />
           <Route path="/logout" component={LogoutFunction} />
 

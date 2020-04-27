@@ -51,7 +51,7 @@ export default function TemporaryDrawer() {
                 </ListItem>
                 <ListItem button>
                     <ListItemIcon><FitnessCenter color="secondary"/></ListItemIcon>
-                    <Link style={{ color: "black", textDecoration: "none" }} to={"/workouts"}>
+                    <Link style={{ color: "black", textDecoration: "none" }} to={"/exercises"}>
                         <ListItemText primary="Exercises" />
                     </Link>
                 </ListItem> 

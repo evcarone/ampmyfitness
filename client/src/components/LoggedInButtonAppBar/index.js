@@ -41,7 +41,7 @@ class LoggedInButtonAppBar extends React.Component {
               <TemporaryDrawer />
             </IconButton>
             <Typography variant="h5" align="center" style={{ flexGrow: 1, marginLeft: "25px" }}>
-              Amp My Fitness
+              AMP MY FITNESS
             </Typography>
             <Button style={{ color: "white" }}><AccountCircleIcon fontSize="large" />&nbsp;&nbsp;{this.state.user.name}</Button>
           </Toolbar>
