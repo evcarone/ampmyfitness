@@ -27,7 +27,7 @@ class Landing extends React.Component {
      */
     render() {
         return (
-            <div style={{ height: 'calc(100vh)', backgroundImage: `url(/images/Enter.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center', display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+            <div style={{ height: 'calc(100vh)', backgroundImage: `url(/images/login.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center', display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
                 <div style={{ opacity: ".85" }}>
                 <img src="images/logo.png" style={{ padding: "70px", width: "350px", height: "auto", margin: "0", position: "absolute", top: "35%", left: "50%", transform: "translate(-50%, -50%)" }}/>
                     <EnterButton />

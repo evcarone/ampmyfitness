@@ -55,9 +55,9 @@ export default function FullWidthGrid() {
                             <Card className={classes.card}>
                                 <CardMedia
                                     className={classes.cardMedia}
-                                    image="images/exercises/back.jpg">
-                                    <Link style={{ color: "black", textDecoration: "none" }} to={"/home"}>
-                                        <Button className={classes.button}>BACK
+                                    image="images/videos/crossfit.jpg">
+                                    <Link style={{ color: "black", textDecoration: "none" }} to={"/vids"}>
+                                        <Button className={classes.button}>CROSSFIT
                                 </Button>
                                     </Link>
                                 </CardMedia>
@@ -67,9 +67,9 @@ export default function FullWidthGrid() {
                             <Card className={classes.card}>
                                 <CardMedia
                                     className={classes.cardMedia}
-                                    image="images/exercises/arms.jpg">
+                                    image="images/videos/run.jpg">
                                     <Link style={{ color: "black", textDecoration: "none" }} to={"/home"}>
-                                        <Button className={classes.button}>ARMS</Button>
+                                        <Button className={classes.button}>RUNNING</Button>
                                     </Link>
                                 </CardMedia>
                             </Card>
@@ -78,9 +78,10 @@ export default function FullWidthGrid() {
                             <Card className={classes.card}>
                                 <CardMedia
                                     className={classes.cardMedia}
-                                    image="images/exercises/chest.jpg">
-                                    <Link style={{ color: "black", textDecoration: "none" }} to={"/home"}>
-                                        <Button className={classes.button}>CHEST</Button>
+                                    image="images/videos/cycling.jpg">
+                                    <Link style={{ color: "black", textDecoration: "none" }} to={"/vids"}>
+                                        <Button className={classes.button}>CYCLING
+                                        </Button>
                                     </Link>
                                 </CardMedia>
                             </Card>
@@ -89,9 +90,9 @@ export default function FullWidthGrid() {
                             <Card className={classes.card}>
                                 <CardMedia
                                     className={classes.cardMedia}
-                                    image="images/exercises/abs.jpg">
+                                    image="images/videos/yoga.jpg">
                                     <Link style={{ color: "black", textDecoration: "none" }} to={"/home"}>
-                                        <Button className={classes.button}>ABS</Button>
+                                        <Button className={classes.button}>YOGA</Button>
                                     </Link>
                                 </CardMedia>
                             </Card>
@@ -100,9 +101,9 @@ export default function FullWidthGrid() {
                             <Card className={classes.card}>
                                 <CardMedia
                                     className={classes.cardMedia}
-                                    image="images/exercises/legs.jpg">
+                                    image="images/videos/hiit.jpg">
                                     <Link style={{ color: "black", textDecoration: "none" }} to={"/home"}>
-                                        <Button className={classes.button}>LEGS</Button>
+                                        <Button className={classes.button}>HIIT</Button>
                                     </Link>
                                 </CardMedia>
                             </Card>
@@ -111,9 +112,9 @@ export default function FullWidthGrid() {
                             <Card className={classes.card}>
                                 <CardMedia
                                     className={classes.cardMedia}
-                                    image="images/exercises/shoulders.jpg">
+                                    image="images/videos/pilates.jpg">
                                     <Link style={{ color: "black", textDecoration: "none" }} to={"/home"}>
-                                        <Button className={classes.button}>SHOULDERS</Button>
+                                        <Button className={classes.button}>PILATES</Button>
                                     </Link>
                                 </CardMedia>
                             </Card>

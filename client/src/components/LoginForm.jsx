@@ -7,7 +7,6 @@ import Container from '@material-ui/core/Container';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle'
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
 
@@ -21,15 +20,12 @@ const LoginForm = ({
 }) => (
 
     <Fragment>
-      <Card style={{ display: "flex", width: "100%", height: 'calc(100vh)' }}>
-        <CardMedia
-          style={{ width: "70%" }}
-          image="/images/amp.jpg"
-        />
-        <div style={{ width: "auto" }}>
-          <CardContent>
+      <div style={{ height: 'calc(100vh)', backgroundImage: `url(/images/login.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center', display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+      <Card style={{ display: "flex", opacity: ".9" }}>
+        <div>
+          <CardContent style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", backgroundColor: "white" }}>
             <Container>
-              <div style={{ marginTop: "30%" }}>
+              <div style={{ marginTop: "10%" }}>
                 <form action="/" onSubmit={onSubmit} >
                   <h6 class="display-4" style={{ fontSize: "250%" }}>Welcome</h6>
                   <AccountCircleIcon style={{ fontSize: "60px", marginBottom: "30px", marginTop: "20px" }} />
@@ -62,6 +58,7 @@ const LoginForm = ({
           </CardContent>
           </div>
       </Card>
+      </div>
     </Fragment>
 
   );
