@@ -9,7 +9,7 @@ export default function RandomQuote() {
 
 
     <div>
-      <Typography component="p" style={{ fontSize: "18px", color: "white", margin: "20px", marginTop: "0px", opacity: ".8" }}>
+      <Typography component="p" style={{ fontSize: "18px", color: "white", margin: "20px", marginTop: "0px", opacity: ".8", fontWeight: "lighter" }}>
         <div style={{ textAlign: "center" }}>
           {athleteQuotes[Math.floor(Math.random() * (athleteQuotes.length - 1))].quote}
         </div>

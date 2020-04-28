@@ -1,45 +1,16 @@
 import React, { useState } from 'react';
 import Container from '@material-ui/core/Container';
-import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
-import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-
-function TabPanel(props) {
-    const { children, value, index, ...other } = props;
-
-    return (
-        <Typography
-            component="div"
-            role="tabpanel"
-            hidden={value !== index}
-            id={`action-tabpanel-${index}`}
-            aria-labelledby={`action-tab-${index}`}
-            {...other}
-        >
-            {value === index && <Box p={3}>{children}</Box>}
-        </Typography>
-    );
-}
-
-TabPanel.propTypes = {
-    children: PropTypes.node,
-    index: PropTypes.any.isRequired,
-    value: PropTypes.any.isRequired,
-};
-
-function a11yProps(index) {
-    return {
-        id: `action-tab-${index}`,
-        'aria-controls': `action-tabpanel-${index}`,
-    };
-}
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Grid from '@material-ui/core/Grid';
+import BarChartIcon from '@material-ui/icons/BarChart';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -84,7 +55,7 @@ export default function FloatingActionButtonZoom() {
 
     const handleBMI = (event) => {
         event.preventDefault()
-        let newBmi = parseInt(703*weight/(height*height))
+        let newBmi = parseInt(703 * weight / (height * height))
         setBmi(newBmi)
     };
 
@@ -95,63 +66,50 @@ export default function FloatingActionButtonZoom() {
     };
 
     return (
-<div style={{ textAlign: "center", width: "75%", height: "100px" }}>
-        <Container style={{ display: "inline-block", opacity: ".8" }}>
-            <div className={classes.root}>
-                <AppBar position="static" style={{ backgroundColor: "#3A3D40" }}>
-                    <Tabs
-                        value={value}
-                        onChange={handleChangeBMI, handleChangeMaxHR}
-                        indicatorColor="success"
-                        textColor="success"
-                        variant="fullWidth"
-                        aria-label="action tabs example"
-                    >
-                        <Tab label="BMI" {...a11yProps(0)} />
-                        <Tab label="Max Heart Rate" {...a11yProps(1)} />
-                    </Tabs>
-                </AppBar>
-                <TabPanel style={{ backgroundColor: "#8f8f8f" }} value={value} index={0} dir={theme.direction}>
-                    <div style={{ textAlign: "center" }}>
-                    <form style={{ width: "100%", display: "inline-block", marginBottom: "-30px" }}>
-                            <h1 class="display-4" style={{ fontSize: "300%" }}>Input Weight</h1>
-
-                            <TextField onChange={handleWeightChange} id="standard-basic" label="Weight in Pounds" style={{ width: "85%" }} />
-
-                            <br></br>
-                            <br></br>
-
-                            <TextField onChange={handleHeightChange} id="standard-basic" label="Height in Inches" style={{ width: "85%" }} />
-
-
-                            <hr class="my-4"></hr>
-                            <div className="button-line" style={{ marginBottom: "50px"}}>
-                                <Button color="secondary" type="submit" onClick={handleBMI} variant="contained" children="Submit" />
-                            </div>
-                            <h1> BMI: {bmi} </h1>
-                        
-                    </form>
-                    </div>
-                    
-                </TabPanel>
-
-                <TabPanel style={{ backgroundColor: "#8f8f8f" }} value={value} index={1} dir={theme.direction}>
-                <div style={{ textAlign: "center" }}>
-                    <form style={{ width: "100%", display: "inline-block" }}>
-                            <h1 class="display-4" style={{ fontSize: "300%" }}>Input Age</h1>
-
-                            <TextField onChange={handleAgeChange} id="standard-basic" label="Age" style={{ width: "85%" }} />
-
-                            <hr class="my-4"></hr>
-                            <div className="button-line" style={{ marginBottom: "50px"}}>
-                                <Button color="secondary" type="submit" onClick={handleMaxHR} variant="contained" children="Submit" />
-                            </div>
-                            <h3><FavoriteBorderIcon style={{ fontSize: "36px" }}/>: {maxHR} </h3>
-                    </form>
-                    </div>
-        </TabPanel>
-            </div>
-        </Container>
+        <div style={{ textAlign: "center", width: "75%", height: "100px" }}>
+            <Container style={{ display: "inline-block", opacity: ".8" }}>
+                {/* <div className={classes.root}> */}
+                <Grid container spacing={4}>
+                    <Grid xs={12} sm={12} md={6}>
+                        <ExpansionPanel style={{ marginLeft: "10px", marginRight: "10px", marginBottom: "10px" }}>
+                            <ExpansionPanelSummary
+                                expandIcon={<ExpandMoreIcon />}>
+                                <Typography style={{ margin: "10px", fontSize: "18px" }}><strong>MAX HEART RATE&nbsp;&nbsp;<FavoriteBorderIcon style={{ color: "#c51f30" }} />&nbsp;{maxHR}</strong></Typography>
+                            </ExpansionPanelSummary>
+                            <ExpansionPanelDetails style={{ overflow: 'auto', justifyContent: "center" }}>
+                                <div>
+                                    <form style={{ width: "100%", display: "inline-block" }}>
+                                        <TextField onChange={handleAgeChange} label="Age" />
+                                        <br></br>
+                                        <br></br>
+                                        <Button color="secondary" type="submit" onClick={handleMaxHR} variant="contained" children="Submit" />
+                                    </form>
+                                </div>
+                            </ExpansionPanelDetails>
+                        </ExpansionPanel>
+                    </Grid>
+                    <Grid xs={12} sm={12} md={6}>
+                        <ExpansionPanel style={{ marginLeft: "10px", marginRight: "10px" }}>
+                            <ExpansionPanelSummary
+                                expandIcon={<ExpandMoreIcon />}>
+                                <Typography style={{ margin: "10px", fontSize: "18px" }}><strong>BMI&nbsp;&nbsp;<BarChartIcon style={{ color: "#c51f30" }} />&nbsp;{bmi}</strong> </Typography>
+                            </ExpansionPanelSummary>
+                            <ExpansionPanelDetails style={{ maxHeight: 600, overflow: 'auto', justifyContent: "center" }}>
+                                <div>
+                                    <form style={{ width: "100%", display: "inline-block" }}>
+                                        <TextField onChange={handleWeightChange} label='Weight (in.)' />
+                                        <br></br>
+                                        <TextField onChange={handleHeightChange} label="Height (lbs.)" />
+                                        <br></br>
+                                        <br></br>
+                                        <Button color="secondary" type="submit" onClick={handleBMI} variant="contained" children="Submit" />
+                                    </form>
+                                </div>
+                            </ExpansionPanelDetails>
+                        </ExpansionPanel>
+                    </Grid>
+                </Grid>
+            </Container>
         </div>
     );
 }

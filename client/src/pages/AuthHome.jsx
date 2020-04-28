@@ -37,13 +37,11 @@ class AuthVideos extends React.Component {
                     <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '2%', opacity: ".8" }}>
                         <RandomQuotes></RandomQuotes>
                     </div>
-
                     <br></br>
-                    
+                    <br></br>
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <WeightInputs></WeightInputs>
                     </div>
-
                 </div>
             </div>);
     }
