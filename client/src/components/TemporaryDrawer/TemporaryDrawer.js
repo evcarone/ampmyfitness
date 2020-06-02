@@ -13,6 +13,8 @@ import Home from '@material-ui/icons/Home';
 import Videocam from '@material-ui/icons/Videocam'
 import ExitToApp from "@material-ui/icons/ExitToApp"
 import { Link } from "react-router-dom";
+import { red } from '@material-ui/core/colors';
+
 const useStyles = makeStyles({
     list: {
         width: 250,
@@ -20,6 +22,9 @@ const useStyles = makeStyles({
     fullList: {
         width: 'auto',
     },
+    link: {
+        color: red[700]
+    }
 });
 export default function TemporaryDrawer() {
     const classes = useStyles();
@@ -44,25 +49,25 @@ export default function TemporaryDrawer() {
         >
             <List>
                 <ListItem button>
-                    <ListItemIcon><Home color="secondary"/></ListItemIcon>
+                    <ListItemIcon><Home className={classes.link} color="secondary"/></ListItemIcon>
                     <Link style={{ color: "black", textDecoration: "none" }} to={"/home"}>
                         <ListItemText primary="Home" />
                     </Link>
                 </ListItem>
                 <ListItem button>
-                    <ListItemIcon><FitnessCenter color="secondary"/></ListItemIcon>
+                    <ListItemIcon><FitnessCenter className={classes.link} color="secondary"/></ListItemIcon>
                     <Link style={{ color: "black", textDecoration: "none" }} to={"/exercises"}>
                         <ListItemText primary="Exercises" />
                     </Link>
                 </ListItem> 
                 <ListItem button>
-                    <ListItemIcon><Videocam color="secondary"/></ListItemIcon>
+                    <ListItemIcon><Videocam className={classes.link} color="secondary"/></ListItemIcon>
                     <Link style={{ color: "black", textDecoration: "none" }} to={"/videos"}>
                         <ListItemText primary="Videos" />
                     </Link>
                 </ListItem>
                 <ListItem button>
-                    <ListItemIcon><ExitToApp color="secondary" /></ListItemIcon>
+                    <ListItemIcon><ExitToApp className={classes.link} color="secondary" /></ListItemIcon>
                     <Link style={{ color: "black", textDecoration: "none" }} to={"/logout"}>
                         <ListItemText primary="Log Out" />
                     </Link>

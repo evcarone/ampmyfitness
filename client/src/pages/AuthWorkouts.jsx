@@ -1,6 +1,7 @@
 import React from 'react';
 import Auth from '../utils/Auth';
-import Workouts from "./Workouts"
+//import Workouts from "./Workouts"
+import BackExercises from "./exerciseGroup/backExercises";
 import API from '../utils/API';
 import LoggedInButtonAppBar from "../components/LoggedInButtonAppBar/index"
 
@@ -30,12 +31,8 @@ class AuthVideos extends React.Component {
         return (
             <div>
                 <LoggedInButtonAppBar></LoggedInButtonAppBar>
-                <div style={{ height: 'calc(100vh - 64px)', backgroundImage: `url(/images/dU7Lxw.jpg)`, backgroundSize: 'cover', }}>
-                    <br></br>
-                    <Workouts></Workouts>
+                    <BackExercises></BackExercises>
                 </div>
-                </div>
-
                 );
             }
         

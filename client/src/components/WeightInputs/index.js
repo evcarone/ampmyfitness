@@ -82,7 +82,7 @@ export default function FloatingActionButtonZoom() {
                                         <TextField onChange={handleAgeChange} label="Age" />
                                         <br></br>
                                         <br></br>
-                                        <Button color="secondary" type="submit" onClick={handleMaxHR} variant="contained" children="Submit" />
+                                        <Button style={{ backgroundColor: "#c51f30", color: "white" }} type="submit" onClick={handleMaxHR} variant="contained" children="Submit" />
                                     </form>
                                 </div>
                             </ExpansionPanelDetails>
@@ -97,12 +97,12 @@ export default function FloatingActionButtonZoom() {
                             <ExpansionPanelDetails style={{ maxHeight: 600, overflow: 'auto', justifyContent: "center" }}>
                                 <div>
                                     <form style={{ width: "100%", display: "inline-block" }}>
-                                        <TextField onChange={handleWeightChange} label='Weight (in.)' />
+                                        <TextField onChange={handleWeightChange} label='Height (in.)' />
                                         <br></br>
-                                        <TextField onChange={handleHeightChange} label="Height (lbs.)" />
+                                        <TextField onChange={handleHeightChange} label="Weight (lbs.)"/>
                                         <br></br>
                                         <br></br>
-                                        <Button color="secondary" type="submit" onClick={handleBMI} variant="contained" children="Submit" />
+                                        <Button style={{ backgroundColor: "#c51f30", color: "white" }} type="submit" onClick={handleBMI} variant="contained" children="Submit" />
                                     </form>
                                 </div>
                             </ExpansionPanelDetails>

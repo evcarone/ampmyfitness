@@ -12,6 +12,12 @@ import Auth from './utils/Auth';
 import AuthHome from "./pages/AuthHome";
 import Landing from "./pages/LandingPage.jsx";
 import AuthWorkoutVideos from "./pages/AuthWorkoutVideos.jsx";
+import AuthBackWorkout from './pages/exerciseGroup/backExercises';
+import AuthAbWorkout from './pages/exerciseGroup/abExercises';
+import AuthArmWorkout from './pages/exerciseGroup/armExercises';
+import AuthLegWorkout from './pages/exerciseGroup/legExercises';
+import AuthChestWorkout from './pages/exerciseGroup/chestExercises';
+import AuthShoulderWorkout from './pages/exerciseGroup/shoulderExercises';
 // remove tap delay, essential for MaterialUI to work properly
 // injectTapEventPlugin();
 
@@ -47,6 +53,13 @@ class App extends Component {
           <PrivateRoute path="/videos" component={AuthWorkoutVideos} />
           <PrivateRoute path="/exercises" component={AuthExercises} />
           <PrivateRoute path="/vids" component={AuthVideos} />
+          {/* Body Part Exercise Pages */}
+          <PrivateRoute path="/backExercises" component={AuthBackWorkout} />
+          <PrivateRoute path="/abExercises" component={AuthAbWorkout} />
+          <PrivateRoute path="/armExercises" component={AuthArmWorkout} />
+          <PrivateRoute path="/shoulderExercises" component={AuthShoulderWorkout} />
+          <PrivateRoute path="/chestExercises" component={AuthChestWorkout} />
+          <PrivateRoute path="/legExercises" component={AuthLegWorkout} />
           <PropsRoute path="/signup" component={SignUpPage} />
           <Route path="/logout" component={LogoutFunction} />
 
