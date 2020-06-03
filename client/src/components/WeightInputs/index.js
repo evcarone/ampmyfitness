@@ -11,6 +11,7 @@ import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Grid from '@material-ui/core/Grid';
 import BarChartIcon from '@material-ui/icons/BarChart';
+import { red } from '@material-ui/core/colors';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -18,6 +19,9 @@ const useStyles = makeStyles(theme => ({
         width: "auto",
         position: 'relative',
     },
+    button: {
+        backgroundColor: red[800]
+    }
 }));
 
 export default function FloatingActionButtonZoom() {
@@ -82,7 +86,7 @@ export default function FloatingActionButtonZoom() {
                                         <TextField onChange={handleAgeChange} label="Age" />
                                         <br></br>
                                         <br></br>
-                                        <Button style={{ backgroundColor: "#c51f30", color: "white" }} type="submit" onClick={handleMaxHR} variant="contained" children="Submit" />
+                                        <Button className={classes.button} color="primary" style={{ color: "white" }} type="submit" onClick={handleMaxHR} variant="contained" children="Submit" />
                                     </form>
                                 </div>
                             </ExpansionPanelDetails>
@@ -97,12 +101,12 @@ export default function FloatingActionButtonZoom() {
                             <ExpansionPanelDetails style={{ maxHeight: 600, overflow: 'auto', justifyContent: "center" }}>
                                 <div>
                                     <form style={{ width: "100%", display: "inline-block" }}>
-                                        <TextField onChange={handleWeightChange} label='Height (in.)' />
+                                        <TextField onChange={handleWeightChange} label='Weight (lbs.)' />
                                         <br></br>
-                                        <TextField onChange={handleHeightChange} label="Weight (lbs.)"/>
+                                        <TextField onChange={handleHeightChange} label="Height (in.)"/>
                                         <br></br>
                                         <br></br>
-                                        <Button style={{ backgroundColor: "#c51f30", color: "white" }} type="submit" onClick={handleBMI} variant="contained" children="Submit" />
+                                        <Button className={classes.button} color="primary" style={{ color: "white" }} type="submit" onClick={handleBMI} variant="contained" children="Submit" />
                                     </form>
                                 </div>
                             </ExpansionPanelDetails>

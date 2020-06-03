@@ -23,7 +23,7 @@ const useStyles = makeStyles({
         width: 'auto',
     },
     link: {
-        color: red[700]
+        color: red[800]
     }
 });
 export default function TemporaryDrawer() {
