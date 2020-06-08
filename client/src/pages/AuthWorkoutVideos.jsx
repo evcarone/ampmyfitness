@@ -56,7 +56,7 @@ export default function FullWidthGrid() {
                                 <CardMedia
                                     className={classes.cardMedia}
                                     image="images/videos/crossfit.jpg">
-                                    <Link style={{ color: "black", textDecoration: "none" }} to={"/vids"}>
+                                    <Link style={{ color: "black", textDecoration: "none" }} to={"/crossfitVids"}>
                                         <Button className={classes.button}>CROSSFIT
                                 </Button>
                                     </Link>
@@ -68,7 +68,7 @@ export default function FullWidthGrid() {
                                 <CardMedia
                                     className={classes.cardMedia}
                                     image="images/videos/run.jpg">
-                                    <Link style={{ color: "black", textDecoration: "none" }} to={"/home"}>
+                                    <Link style={{ color: "black", textDecoration: "none" }} to={"/runningVids"}>
                                         <Button className={classes.button}>RUNNING</Button>
                                     </Link>
                                 </CardMedia>
@@ -91,7 +91,7 @@ export default function FullWidthGrid() {
                                 <CardMedia
                                     className={classes.cardMedia}
                                     image="images/videos/yoga.jpg">
-                                    <Link style={{ color: "black", textDecoration: "none" }} to={"/home"}>
+                                    <Link style={{ color: "black", textDecoration: "none" }} to={"/yogaVids"}>
                                         <Button className={classes.button}>YOGA</Button>
                                     </Link>
                                 </CardMedia>
@@ -113,7 +113,7 @@ export default function FullWidthGrid() {
                                 <CardMedia
                                     className={classes.cardMedia}
                                     image="images/videos/pilates.jpg">
-                                    <Link style={{ color: "black", textDecoration: "none" }} to={"/home"}>
+                                    <Link style={{ color: "black", textDecoration: "none" }} to={"/pilatesVids"}>
                                         <Button className={classes.button}>PILATES</Button>
                                     </Link>
                                 </CardMedia>
