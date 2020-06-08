@@ -1,11 +1,8 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { Link } from "react-router-dom";
 import Button from '@material-ui/core/Button';
-import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle'
 import API from '../../utils/API';
 import Auth from '../../utils/Auth';
@@ -35,13 +32,15 @@ class LoggedInButtonAppBar extends React.Component {
   render() {
     return (
       <div style={{ flexGrow: 1 }}>
-        <AppBar position="static" color="secondary" style={{ backgroundColor: "#c62828" }}>
+        <AppBar position="static" color="secondary" style={{ backgroundColor: "#a52828", height: "90px" }}>
           <Toolbar>
             <IconButton edge="start" color="inherit" aria-label="menu">
               <TemporaryDrawer />
             </IconButton>
             <Typography variant="h5" align="center" style={{ flexGrow: 1, marginLeft: "25px" }}>
-              AMP MY FITNESS
+            <img src="images/logo.png" style={{ width: "80px", height: "auto", margin: "0", position: "absolute", top: "53%", left: "50%", transform: "translate(-50%, -50%)" }}/>
+            <div style={{ margin: "0", position: "absolute", top: "65%", left: "50%", transform: "translate(-50%, -50%)", backgroundColor: "#202527", fontSize: "16px", padding: "3px", paddingTop: "5px", paddingLeft: "15px", paddingRight: "15px", opacity: ".9", borderRadius: "10px", fontWeight: "lighter" }} >AMP MY FITNESS
+            </div>
             </Typography>
             <Button style={{ color: "white" }}><AccountCircleIcon fontSize="large" />&nbsp;&nbsp;{this.state.user.name}</Button>
           </Toolbar>

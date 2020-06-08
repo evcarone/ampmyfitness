@@ -78,7 +78,7 @@ export default function FloatingActionButtonZoom() {
                         <ExpansionPanel style={{ marginLeft: "10px", marginRight: "10px", marginBottom: "10px" }}>
                             <ExpansionPanelSummary
                                 expandIcon={<ExpandMoreIcon />}>
-                                <Typography style={{ margin: "10px", fontSize: "18px" }}><strong>MAX HEART RATE&nbsp;&nbsp;<FavoriteBorderIcon style={{ color: "#c51f30" }} />&nbsp;{maxHR}</strong></Typography>
+                                <Typography style={{ margin: "10px", fontSize: "18px" }}><strong>MAX HEART RATE&nbsp;&nbsp;<FavoriteBorderIcon style={{ color: "#a52828" }} />&nbsp;{maxHR}</strong></Typography>
                             </ExpansionPanelSummary>
                             <ExpansionPanelDetails style={{ overflow: 'auto', justifyContent: "center" }}>
                                 <div>
@@ -96,7 +96,7 @@ export default function FloatingActionButtonZoom() {
                         <ExpansionPanel style={{ marginLeft: "10px", marginRight: "10px" }}>
                             <ExpansionPanelSummary
                                 expandIcon={<ExpandMoreIcon />}>
-                                <Typography style={{ margin: "10px", fontSize: "18px" }}><strong>BMI&nbsp;&nbsp;<BarChartIcon style={{ color: "#c51f30" }} />&nbsp;{bmi}</strong> </Typography>
+                                <Typography style={{ margin: "10px", fontSize: "18px" }}><strong>BMI&nbsp;&nbsp;<BarChartIcon style={{ color: "#a52828" }} />&nbsp;{bmi}</strong> </Typography>
                             </ExpansionPanelSummary>
                             <ExpansionPanelDetails style={{ maxHeight: 600, overflow: 'auto', justifyContent: "center" }}>
                                 <div>

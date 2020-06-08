@@ -12,12 +12,13 @@ import Auth from './utils/Auth';
 import AuthHome from "./pages/AuthHome";
 import Landing from "./pages/LandingPage.jsx";
 import AuthWorkoutVideos from "./pages/AuthWorkoutVideos.jsx";
-import AuthBackWorkout from './pages/exerciseGroup/backExercises';
-import AuthAbWorkout from './pages/exerciseGroup/abExercises';
-import AuthArmWorkout from './pages/exerciseGroup/armExercises';
-import AuthLegWorkout from './pages/exerciseGroup/legExercises';
-import AuthChestWorkout from './pages/exerciseGroup/chestExercises';
-import AuthShoulderWorkout from './pages/exerciseGroup/shoulderExercises';
+import AuthBackWorkout from './pages/exerciseGroups/backExercises';
+import AuthAbWorkout from './pages/exerciseGroups/abExercises';
+import AuthArmWorkout from './pages/exerciseGroups/armExercises';
+import AuthLegWorkout from './pages/exerciseGroups/legExercises';
+import AuthChestWorkout from './pages/exerciseGroups/chestExercises';
+import AuthShoulderWorkout from './pages/exerciseGroups/shoulderExercises';
+import AuthCyclingVids from './pages/videoGroups/cyclingVideos';
 // remove tap delay, essential for MaterialUI to work properly
 // injectTapEventPlugin();
 
@@ -50,7 +51,7 @@ class App extends Component {
           <Route exact path="/" component={Landing} />
           <PropsRoute path="/login" component={LoginPage} toggleAuthenticateStatus={this.toggleAuthenticateStatus} />
           <PrivateRoute path="/home" component={AuthHome} />
-          <PrivateRoute path="/videos" component={AuthWorkoutVideos} />
+          <Route path="/videos" component={AuthWorkoutVideos} />
           <PrivateRoute path="/exercises" component={AuthExercises} />
           <PrivateRoute path="/vids" component={AuthVideos} />
           {/* Body Part Exercise Pages */}
@@ -60,6 +61,8 @@ class App extends Component {
           <PrivateRoute path="/shoulderExercises" component={AuthShoulderWorkout} />
           <PrivateRoute path="/chestExercises" component={AuthChestWorkout} />
           <PrivateRoute path="/legExercises" component={AuthLegWorkout} />
+          {/* Workout Video Pages */}
+          <Route path="/cyclingVids" component={AuthCyclingVids} />
           <PropsRoute path="/signup" component={SignUpPage} />
           <Route path="/logout" component={LogoutFunction} />
 
