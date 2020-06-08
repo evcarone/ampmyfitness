@@ -102,7 +102,7 @@ export default function FullWidthGrid() {
                                 <CardMedia
                                     className={classes.cardMedia}
                                     image="images/videos/hiit.jpg">
-                                    <Link style={{ color: "black", textDecoration: "none" }} to={"/home"}>
+                                    <Link style={{ color: "black", textDecoration: "none" }} to={"/hiitVids"}>
                                         <Button className={classes.button}>HIIT</Button>
                                     </Link>
                                 </CardMedia>
