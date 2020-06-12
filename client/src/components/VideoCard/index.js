@@ -5,6 +5,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -17,21 +18,17 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function MediaCard(props) {
-  const classes = useStyles();
+    const classes = useStyles();
 
-  return (
-    <Card style={{ margin: "20px", backgroundColor: "#f5f5f5" }} className={classes.root}>
-                                <CardActionArea>
-                                    <CardMedia
-                                    > <iframe id="ytplayer" type="text/html" width="100%" height="360"
-                                        src={`https://www.youtube.com/embed/${props.videoId}?autoplay=1`}
-                                        frameborder="0"></iframe></CardMedia>
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h5" component="h2">
-                                            {props.title}
-                                        </Typography>
-                                    </CardContent>
-                                </CardActionArea>
-                            </Card>
-  );
+    return (
+        <div style={{ paddingTop: "30px" }}>
+            <iframe id="ytplayer" type="text/html" width="90%" height="360"
+                src={`https://www.youtube.com/embed/${props.videoId}?autoplay=1`}
+                frameborder="0"></iframe>
+            <Typography style={{ marginTop: "10px" }} gutterBottom variant="h5" component="h2">
+                {props.title}
+            </Typography>
+            <Divider style={{ marginTop: "15px" }}></Divider>
+        </div>
+    );
 }
