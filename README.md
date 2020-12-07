@@ -4,7 +4,7 @@ AmpMyFitness is a fitness app that provides the user with workout classes via Yo
 
 ## App Login Page:
 
-![App Function](https://github.com/evcarone/ampmyfitness/blob/master/demo-images/Screen%20Shot%202020-03-13%20at%204.57.29%20PM.png)
+![App Function]()
 
 ## Application Requirements
 
@@ -51,13 +51,13 @@ https://hidden-caverns-01936.herokuapp.com/
 
 ## App Home Page:
 
- ![App Function](https://github.com/evcarone/ampmyfitness/blob/master/demo-images/Screen%20Shot%202020-03-13%20at%204.58.06%20PM.png)
+ ![App Function]()
  
  ## Exercises Page:
  
- ![App Function](https://github.com/evcarone/ampmyfitness/blob/master/demo-images/Screen%20Shot%202020-03-13%20at%204.58.44%20PM.png)
+ ![App Function]()
  
   ## Videos Page:
  
- ![App Function](https://github.com/evcarone/ampmyfitness/blob/master/demo-images/Screen%20Shot%202020-03-13%20at%204.59.04%20PM.png)
+ ![App Function]()
  
